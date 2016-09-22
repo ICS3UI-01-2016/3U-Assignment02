@@ -2,6 +2,7 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.RobotSE;
+import becker.robots.Thing;
 import becker.robots.Wall;
 import java.awt.Color;
 
@@ -28,6 +29,26 @@ public class Q2 {
         
         new Wall(q2,3,0,Direction.SOUTH);
         new Wall(q2,3,0,Direction.EAST);
+        new Wall(q2,3,1,Direction.SOUTH);
+        new Wall(q2,3,1,Direction.EAST);
+        new Wall(q2,3,2,Direction.SOUTH);
+        new Wall(q2,3,3,Direction.SOUTH);
+        new Wall(q2,3,3,Direction.EAST);
+        new Wall(q2,3,4,Direction.SOUTH);
+        new Wall(q2,3,5,Direction.SOUTH);
+        new Wall(q2,3,6,Direction.SOUTH);
+        new Wall(q2,3,6,Direction.EAST);
+        new Wall(q2,3,7,Direction.SOUTH);
+        new Wall(q2,3,8,Direction.SOUTH);
+        new Thing(q2,3,8);
         
+        while(rick.frontIsClear()){
+            rick.move();
+            if(!rick.frontIsClear()){
+                rick.turnLeft();
+                rick.move();
+                rick.turnRight();
+            }
+        }
     }
 }
