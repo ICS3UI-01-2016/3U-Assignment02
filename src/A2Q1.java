@@ -15,7 +15,7 @@ import becker.robots.Thing;
  *
  * @author baayl
  */
-public class A1Q1 {
+public class A2Q1 {
 
     /**
      * @param args the command line arguments
@@ -45,13 +45,10 @@ public class A1Q1 {
             Rem.move();
             Rem.pickThing();
             // add 1 to the movement counter
-            moves = moves + 1;
+            moves = moves + 0;
+           
         }
-            // make rem move at the end of the row
-            Rem.move();
-            Rem.move();
-            Rem.move();
-            Rem.move();
+            
            }
                
                
