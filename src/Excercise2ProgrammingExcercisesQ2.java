@@ -61,12 +61,9 @@ public class Excercise2ProgrammingExcercisesQ2 {
              cliff.move();
             
          } 
-                
+         if(cliff.canPickThing()){ 
+             break;
+         }
+         }
             
-                 
-        
-            
-        
-        
-    }}
-
+         }
