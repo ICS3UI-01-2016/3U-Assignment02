@@ -109,6 +109,7 @@ public class A2Q2 {
         }
         while(Karel.countThingsInBackpack() == 0){
             Karel.move();
+            
           
          
         
