@@ -84,22 +84,38 @@ public class A2Q5 {
         new Wall(kw,8,3,Direction.SOUTH);
         new Wall(kw,9,2,Direction.EAST);
         new Wall(kw,9,2,Direction.SOUTH);
-        new Thing(kw,1,2);
-        new Thing(kw,2,2);
-        new Thing(kw,4,2);
-        new Thing(kw,7,2);
-        new Thing(kw,1,3);
-        new Thing(kw,4,3);
-        new Thing(kw,7,3);
-        new Thing(kw,8,3);
-        new Thing(kw,1,4);
-        new Thing(kw,2,4);
-        new Thing(kw,4,4);
-        new Thing(kw,8,4);
-        new Thing(kw,1,5);
-        new Thing(kw,2,6);
-        new Thing(kw,8,6);
-        new Thing(kw,7,7);
+        Thing thing1 = new Thing(kw,1,2);
+        thing1.setColor(Color.white);
+        Thing thing2 = new Thing(kw,2,2);
+        thing2.setColor(Color.white);
+        Thing thing3 = new Thing(kw,4,2);
+        thing3.setColor(Color.white);
+        Thing thing4 = new Thing(kw,7,2);
+        thing4.setColor(Color.white);
+        Thing thing5 = new Thing(kw,1,3);
+        thing5.setColor(Color.white);
+        Thing thing6 = new Thing(kw,4,3);
+        thing6.setColor(Color.white);
+        Thing thing7 = new Thing(kw,7,3);
+        thing7.setColor(Color.white);
+        Thing thing8 = new Thing(kw,8,3);
+        thing8.setColor(Color.white);
+        Thing thing9 = new Thing(kw,1,4);
+        thing9.setColor(Color.white);
+        Thing thing10 = new Thing(kw,2,4);
+        thing10.setColor(Color.white);
+        Thing thing11 = new Thing(kw,4,4);
+        thing11.setColor(Color.white);
+        Thing thing12 = new Thing(kw,8,4);
+        thing12.setColor(Color.white);
+        Thing thing13 = new Thing(kw,1,5);
+        thing13.setColor(Color.white);
+        Thing thing14 = new Thing(kw,2,6);
+        thing14.setColor(Color.white);
+        Thing thing15 = new Thing(kw,8,6);
+        thing15.setColor(Color.white);
+        Thing thing16 = new Thing(kw,7,7);
+        thing16.setColor(Color.white);
         while(true){
             if(Jim.frontIsClear()&&Jim.isFacingEast()){
                 Jim.move();
@@ -112,7 +128,13 @@ public class A2Q5 {
             }
             else if(!Jim.frontIsClear()&&Jim.getAvenue()==2){
                 Jim.turnRight();
-                Jim.move();
+                if(Jim.frontIsClear()){
+                    Jim.move();
+            }
+                else if(!Jim.frontIsClear()){
+                    Jim.turnLeft();
+                    break;
+                }
             }
             else if(!Jim.frontIsClear()){
                 Jim.turnAround();
@@ -124,5 +146,12 @@ public class A2Q5 {
                 Jim.move();
             }
         }
+        while(Ben.frontIsClear()){
+            if(Ben.canPickThing()){
+                Ben.pickAllThings();
+            }
+            Ben.move();
+        }
+        Ben.putAllThings();
     }
 }
