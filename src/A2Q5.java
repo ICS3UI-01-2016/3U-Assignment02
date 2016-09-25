@@ -153,6 +153,5 @@ public class A2Q5 {
             Ben.move();
         }
         Ben.putAllThings();
-        something
     }
 }
