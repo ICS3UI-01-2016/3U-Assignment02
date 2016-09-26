@@ -41,34 +41,30 @@ public class A2Q2 {
         new Wall(af,1,4,Direction.EAST);
         new Thing(af,1,9);
        
-        
-        while(true){
-            // make Rem jump hurdles
-            if(!Rem.frontIsClear()){
+        // make rem 'jump' hurdles
+        while (!Rem.canPickThing()) { 
+
+            if (!Rem.frontIsClear()) {
                 Rem.turnLeft();
-                
-                
-            }else{
                 Rem.move();
+                Rem.turnLeft();
+                Rem.turnLeft();
+                Rem.turnLeft();
+                Rem.move();
+                Rem.turnLeft();
+                Rem.turnLeft();
+                Rem.turnLeft();
+                Rem.move();
+                Rem.turnLeft();
+            }
+            if (Rem.frontIsClear()) {
+                Rem.move();
+            }
             
-        // make Rem turn right!
-        if(Rem.frontIsClear()){
-            Rem.turnLeft();
-            Rem.turnLeft();
-            Rem.turnLeft();
         }
-        // make Rem stop near Thing
-        if(Rem.getAvenue()==9){
-             
-                
-                 if(Rem.getStreet()==1)
-                 Rem.pickThing();
-                
-             break;
-        }
-        
+                // make rem pick up thing
+                Rem.pickThing();
     }
-    }
-}
+    
 }
 
