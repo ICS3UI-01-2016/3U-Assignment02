@@ -16,13 +16,12 @@ public class A2Q3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-               //create city for robot
+        //create city for robot
         City Algorithm = new City();
 
         //create Robot
-        
-        //can navigate back to 0,0 from any coordinate and direction
-        Robot Algorbot = new Robot(Algorithm, -9, -20, Direction.EAST);
+
+        Robot Algorbot = new Robot(Algorithm, 7, -2, Direction.WEST);
 
 
 
@@ -42,15 +41,26 @@ public class A2Q3 {
 
 //if Algorbot is facing the oppisite direction of the origin turn him around.
         if (Algorbot.getDirection() == Direction.EAST) {
-            Algorbot.turnLeft();
-            Algorbot.turnLeft();
-            Algorbot.turnLeft();
+            if (Algorbot.getStreet() < 0) {
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
+            } else if (Algorbot.getStreet() > 0) {
+                Algorbot.turnLeft();
+            }
 
 //if Algorbot is facing the oppisite direction of the origin turn him around.
         } else if (Algorbot.getDirection() == Direction.WEST) {
-            Algorbot.turnLeft();
-
+            if (Algorbot.getStreet() > 0) {
+                Algorbot.turnLeft();
+            } else if (Algorbot.getStreet() < 0) {
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
+            }
         }
+
+
 
 
 
@@ -58,7 +68,7 @@ public class A2Q3 {
 
         //keep moving until robot hits the street with 0
         while (Algorbot.getStreet() != 0) {
-                Algorbot.move(); 
+            Algorbot.move();
         }
 
         //if Algorbot is facing the oppisite direction of the origin 
@@ -88,9 +98,7 @@ public class A2Q3 {
         }
 
         while (Algorbot.getAvenue() != 0) {
-                Algorbot.move();
-            }
+            Algorbot.move();
         }
-
     }
-
+}
