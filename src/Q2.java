@@ -42,13 +42,14 @@ public class Q2 {
         new Wall(q2,3,8,Direction.SOUTH);
         new Thing(q2,3,8);
         
-        while(rick.frontIsClear()){
+        while(!rick.frontIsClear()){
+            rick.turnLeft();
             rick.move();
-            if(!rick.frontIsClear()){
-                rick.turnLeft();
+            rick.turnRight();
+                if(rick.frontIsClear()){
                 rick.move();
-                rick.turnRight();
-            }
+            }       
         }
+
     }
 }
