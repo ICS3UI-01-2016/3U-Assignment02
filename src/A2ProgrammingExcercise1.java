@@ -50,10 +50,11 @@ public class A2ProgrammingExcercise1 {
       lw.pickThing();
       lw.move();
       lw.pickThing();
+      lw.countThingsInBackpack();
       lw.move();
       lw.move();
       lw.move();
       lw.move();
-              
+             
     }
 }
