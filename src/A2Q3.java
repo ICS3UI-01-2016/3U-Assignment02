@@ -21,7 +21,7 @@ public class A2Q3 {
 
         //create Robot
 
-        Robot Algorbot = new Robot(Algorithm, 7, -2, Direction.WEST);
+        Robot Algorbot = new Robot(Algorithm, 7, 2, Direction.WEST);
 
 
 
@@ -43,62 +43,63 @@ public class A2Q3 {
         if (Algorbot.getDirection() == Direction.EAST) {
             if (Algorbot.getStreet() < 0) {
                 Algorbot.turnLeft();
-                Algorbot.turnLeft();
-                Algorbot.turnLeft();
+
             } else if (Algorbot.getStreet() > 0) {
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
                 Algorbot.turnLeft();
             }
 
 //if Algorbot is facing the oppisite direction of the origin turn him around.
         } else if (Algorbot.getDirection() == Direction.WEST) {
-            if (Algorbot.getStreet() > 0) {
+            if (Algorbot.getStreet() < 0) {
                 Algorbot.turnLeft();
-            } else if (Algorbot.getStreet() < 0) {
-                Algorbot.turnLeft();
-                Algorbot.turnLeft();
-                Algorbot.turnLeft();
-            }
-        }
-
-
-
-
-
-        //algorithm to get robot back to 0,0
-
-        //keep moving until robot hits the street with 0
-        while (Algorbot.getStreet() != 0) {
-            Algorbot.move();
-        }
-
-        //if Algorbot is facing the oppisite direction of the origin 
-        //turn him around.
-
-        if (Algorbot.getDirection() == Direction.NORTH) {
-            if (Algorbot.getAvenue() > 0) {
-                Algorbot.turnLeft();
-            } else if (Algorbot.getAvenue() < 0) {
+            } else if (Algorbot.getStreet() > 0) {
                 Algorbot.turnLeft();
                 Algorbot.turnLeft();
                 Algorbot.turnLeft();
             }
-            //if Algorbot is facing the oppisite direction of the origin turn 
-            //him around.                
-        }
-        if (Algorbot.getDirection() == Direction.SOUTH) {
-            if (Algorbot.getAvenue() < 0) {
-                Algorbot.turnLeft();
-            } else if (Algorbot.getAvenue() > 0) {
-                Algorbot.turnLeft();
-                Algorbot.turnLeft();
-                Algorbot.turnLeft();
 
 
+
+
+
+            //algorithm to get robot back to 0,0
+
+            //keep moving until robot hits the street with 0
+            while (Algorbot.getStreet() != 0) {
+                Algorbot.move();
             }
-        }
 
-        while (Algorbot.getAvenue() != 0) {
-            Algorbot.move();
+            //if Algorbot is facing the oppisite direction of the origin 
+            //turn him around.
+
+            if (Algorbot.getDirection() == Direction.NORTH) {
+                if (Algorbot.getAvenue() > 0) {
+                    Algorbot.turnLeft();
+                } else if (Algorbot.getAvenue() < 0) {
+                    Algorbot.turnLeft();
+                    Algorbot.turnLeft();
+                    Algorbot.turnLeft();
+                }
+                //if Algorbot is facing the oppisite direction of the origin turn 
+                //him around.                
+            }
+            if (Algorbot.getDirection() == Direction.SOUTH) {
+                if (Algorbot.getAvenue() < 0) {
+                    Algorbot.turnLeft();
+                } else if (Algorbot.getAvenue() > 0) {
+                    Algorbot.turnLeft();
+                    Algorbot.turnLeft();
+                    Algorbot.turnLeft();
+
+
+                }
+            }
+
+            while (Algorbot.getAvenue() != 0) {
+                Algorbot.move();
+            }
         }
     }
 }
