@@ -21,33 +21,33 @@ public class A2Q4 {
      */
     public static void main(String[] args) {
         
-        City kw = new City();
-        new Wall(kw, 1, 1, Direction.SOUTH);
-        new Wall(kw, 1, 1, Direction.NORTH);
-        new Wall(kw, 1, 1, Direction.EAST);
-        new Wall(kw, 1, 1, Direction.WEST);
-        new Wall(kw, 1, 4, Direction.SOUTH);
-        new Wall(kw, 1, 4, Direction.WEST);
-        new Wall(kw, 1, 4, Direction.NORTH);
-        new Wall(kw, 1, 4, Direction.EAST);
-        new Wall(kw, 4, 1, Direction.SOUTH);
-        new Wall(kw, 4, 1, Direction.NORTH);
-        new Wall(kw, 4, 1, Direction.EAST);
-        new Wall(kw, 4, 1, Direction.WEST);
-        new Wall(kw, 4, 4, Direction.SOUTH);
-        new Wall(kw, 4, 4, Direction.NORTH);
-        new Wall(kw, 4, 4, Direction.EAST);
-        new Wall(kw, 4, 4, Direction.WEST);
-        new Wall(kw, 3, 2, Direction.WEST);
-        new Wall(kw, 2, 2, Direction.WEST);
-        new Wall(kw, 2, 3, Direction.EAST);
-        new Wall(kw, 3, 3, Direction.EAST);
-        new Wall(kw, 2, 2, Direction.NORTH);
-        new Wall(kw, 2, 3, Direction.NORTH);
-        new Wall(kw, 3, 2, Direction.SOUTH);
-        new Wall(kw, 3, 3, Direction.SOUTH);
+        City af = new City();
+        new Wall(af, 1, 1, Direction.SOUTH);
+        new Wall(af, 1, 1, Direction.NORTH);
+        new Wall(af, 1, 1, Direction.EAST);
+        new Wall(af, 1, 1, Direction.WEST);
+        new Wall(af, 1, 4, Direction.SOUTH);
+        new Wall(af, 1, 4, Direction.WEST);
+        new Wall(af, 1, 4, Direction.NORTH);
+        new Wall(af, 1, 4, Direction.EAST);
+        new Wall(af, 4, 1, Direction.SOUTH);
+        new Wall(af, 4, 1, Direction.NORTH);
+        new Wall(af, 4, 1, Direction.EAST);
+        new Wall(af, 4, 1, Direction.WEST);
+        new Wall(af, 4, 4, Direction.SOUTH);
+        new Wall(af, 4, 4, Direction.NORTH);
+        new Wall(af, 4, 4, Direction.EAST);
+        new Wall(af, 4, 4, Direction.WEST);
+        new Wall(af, 3, 2, Direction.WEST);
+        new Wall(af, 2, 2, Direction.WEST);
+        new Wall(af, 2, 3, Direction.EAST);
+        new Wall(af, 3, 3, Direction.EAST);
+        new Wall(af, 2, 2, Direction.NORTH);
+        new Wall(af, 2, 3, Direction.NORTH);
+        new Wall(af, 3, 2, Direction.SOUTH);
+        new Wall(af, 3, 3, Direction.SOUTH);
 
-        Robot Rem = new Robot(kw, 2, 1, Direction.NORTH);
+        Robot Rem = new Robot(af, 2, 1, Direction.NORTH);
 
         while (true) {
             // Karel rotating around the castle
