@@ -36,10 +36,10 @@ public class A2Q2 {
         new Wall(af,1,7,Direction.SOUTH);
         new Wall(af,1,8,Direction.SOUTH);
         new Wall(af,1,9,Direction.SOUTH);
-        new Wall(af,1,7,Direction.EAST);
-        new Wall(af,1,1,Direction.EAST);
+        new Wall(af,1,6,Direction.EAST);
         new Wall(af,1,2,Direction.EAST);
         new Wall(af,1,4,Direction.EAST);
+        new Wall(af,1,3,Direction.EAST);
         new Thing(af,1,9);
        
         // make rem 'jump' hurdles
