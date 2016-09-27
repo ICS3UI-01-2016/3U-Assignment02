@@ -4,8 +4,7 @@ import becker.robots.Direction;
 import becker.robots.Robot;
 import becker.robots.Thing;
 import becker.robots.Wall;
-import static javafx.scene.paint.Color.color;
-import static javafx.scene.paint.Color.color;
+
 
 
 /*
@@ -25,9 +24,11 @@ public class A2Q5 {
     public static void main(String[] args) {
         
         City af = new City();
+        // make shovelBot
         Robot karel = new Robot(af, 1, 3, Direction.SOUTH);
         Robot tina = new Robot(af, 1, 3, Direction.SOUTH);
-        new Wall(af, 10, 3, Direction.SOUTH);
+        
+        // make snow
         new Thing(af, 2, 3);
         new Thing(af, 2, 4);
         new Thing(af, 2, 5);
@@ -81,6 +82,7 @@ public class A2Q5 {
         new Wall(af, 6, 3, Direction.EAST);
         new Wall(af, 7, 3, Direction.EAST);
         new Wall(af, 10, 3, Direction.EAST);
+        new Wall(af, 10, 3, Direction.SOUTH);
         
         // make driveway
         new Wall(af, 2, 4, Direction.NORTH);
