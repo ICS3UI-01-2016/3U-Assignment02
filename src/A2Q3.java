@@ -59,42 +59,41 @@ public class A2Q3 {
                 Algorbot.turnLeft();
             }
         }
-            //algorithm to get robot back to 0,0
+        //algorithm to get robot back to 0,0
 
-            //keep moving until robot hits the street with 0
-            while (Algorbot.getStreet() != 0) {
-                Algorbot.move();
+        //keep moving until robot hits the street with 0
+        while (Algorbot.getStreet() != 0) {
+            Algorbot.move();
+        }
+
+        //if Algorbot is facing the oppisite direction of the origin 
+        //turn him around.
+
+        if (Algorbot.getDirection() == Direction.NORTH) {
+            if (Algorbot.getAvenue() > 0) {
+                Algorbot.turnLeft();
+            } else if (Algorbot.getAvenue() < 0) {
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
             }
-
-            //if Algorbot is facing the oppisite direction of the origin 
-            //turn him around.
-
-            if (Algorbot.getDirection() == Direction.NORTH) {
-                if (Algorbot.getAvenue() > 0) {
-                    Algorbot.turnLeft();
-                } else if (Algorbot.getAvenue() < 0) {
-                    Algorbot.turnLeft();
-                    Algorbot.turnLeft();
-                    Algorbot.turnLeft();
-                }
-                //if Algorbot is facing the oppisite direction of the origin turn 
-                //him around.                
-            }
-            if (Algorbot.getDirection() == Direction.SOUTH) {
-                if (Algorbot.getAvenue() < 0) {
-                    Algorbot.turnLeft();
-                } else if (Algorbot.getAvenue() > 0) {
-                    Algorbot.turnLeft();
-                    Algorbot.turnLeft();
-                    Algorbot.turnLeft();
+            //if Algorbot is facing the oppisite direction of the origin turn 
+            //him around.                
+        }
+        if (Algorbot.getDirection() == Direction.SOUTH) {
+            if (Algorbot.getAvenue() < 0) {
+                Algorbot.turnLeft();
+            } else if (Algorbot.getAvenue() > 0) {
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
+                Algorbot.turnLeft();
 
 
-                }
-            }
-
-            while (Algorbot.getAvenue() != 0) {
-                Algorbot.move();
             }
         }
-    }
 
+        while (Algorbot.getAvenue() != 0) {
+            Algorbot.move();
+        }
+    }
+}
