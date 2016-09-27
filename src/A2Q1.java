@@ -57,9 +57,10 @@ public class A2Q1 {
            Rem.move();
            Rem.move();
                
-               
+  
    
     }      
+
     }
     
 

@@ -24,6 +24,7 @@ public class A2Q2 {
     public static void main(String[] args) {
         City af = new City();
         Robot Rem = new Robot(af,1,1,Direction.EAST);
+        Rem.setLabel("R");
         
         // create hurdles
         new Wall(af,1,1,Direction.SOUTH);

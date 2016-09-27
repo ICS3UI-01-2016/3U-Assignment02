@@ -4,6 +4,7 @@ import becker.robots.Direction;
 import becker.robots.Robot;
 import becker.robots.Thing;
 import becker.robots.Wall;
+import java.awt.Color;
 
 
 
@@ -49,6 +50,7 @@ public class A2Q5 {
 
         karel.setLabel("K");
         tina.setLabel("T");
+        karel.setColor(Color.BLUE);
 
 
 

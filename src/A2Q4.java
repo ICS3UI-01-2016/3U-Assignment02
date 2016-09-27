@@ -21,7 +21,8 @@ public class A2Q4 {
      */
     public static void main(String[] args) {
         
-        City af = new City();
+        
+        City af = new City();        
         new Wall(af, 1, 1, Direction.SOUTH);
         new Wall(af, 1, 1, Direction.NORTH);
         new Wall(af, 1, 1, Direction.EAST);
@@ -46,7 +47,9 @@ public class A2Q4 {
         new Wall(af, 2, 3, Direction.NORTH);
         new Wall(af, 3, 2, Direction.SOUTH);
         new Wall(af, 3, 3, Direction.SOUTH);
-
+        
+       
+        
         Robot Rem = new Robot(af, 2, 1, Direction.NORTH);
 
         while (true) {

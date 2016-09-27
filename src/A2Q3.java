@@ -22,6 +22,7 @@ public class A2Q3 {
         City af = new City();
         Robot Rem = new Robot(af,6,7,Direction.EAST);
         
+        Rem.setLabel("R");
         // get Rem to face North
         while(Rem.getDirection() !=Direction.NORTH){
             Rem.turnLeft();
