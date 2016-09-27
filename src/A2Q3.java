@@ -21,7 +21,7 @@ public class A2Q3 {
 
         //create Robot
 
-        Robot Algorbot = new Robot(Algorithm, 7, 2, Direction.WEST);
+        Robot Algorbot = new Robot(Algorithm, 7, 2, Direction.EAST);
 
 
 
@@ -41,10 +41,9 @@ public class A2Q3 {
 
 //if Algorbot is facing the oppisite direction of the origin turn him around.
         if (Algorbot.getDirection() == Direction.EAST) {
-            if (Algorbot.getStreet() < 0) {
+            if (Algorbot.getStreet() > 0) {
                 Algorbot.turnLeft();
-
-            } else if (Algorbot.getStreet() > 0) {
+            } else if (Algorbot.getStreet() < 0) {
                 Algorbot.turnLeft();
                 Algorbot.turnLeft();
                 Algorbot.turnLeft();
@@ -59,11 +58,7 @@ public class A2Q3 {
                 Algorbot.turnLeft();
                 Algorbot.turnLeft();
             }
-
-
-
-
-
+        }
             //algorithm to get robot back to 0,0
 
             //keep moving until robot hits the street with 0
@@ -102,4 +97,4 @@ public class A2Q3 {
             }
         }
     }
-}
+
