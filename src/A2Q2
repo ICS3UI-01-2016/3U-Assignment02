@@ -1,0 +1,3 @@
+The two if else statements behave the same way because the first statement asks the robot to turn right
+if it can pick up a thing and left if it cant. The second tells the robot to do the same thing but with
+different code.
