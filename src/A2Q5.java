@@ -118,7 +118,7 @@ public class A2Q5 {
         new Wall(af, 9, 4, Direction.SOUTH);
 
         while (true) {
-            // Everytime he skips 3 Avenue and 3 Streets down the sidwalk, Karel moves without picking up
+            // Everytime he skips 3 Avenue and 3 Streets down the sidwalk, Karel moves without picking up snow
             if (karel.canPickThing() && (karel.getAvenue() == 3)) {
                 karel.turnLeft();
                 karel.move();
