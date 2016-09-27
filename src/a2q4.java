@@ -49,6 +49,26 @@ public class a2q4 {
             new Wall(mtl,4,1,Direction.WEST);
             new Wall(mtl,4,1,Direction.EAST);
             //create a loop(get guard to move)
+            while(candice.frontIsClear())
+            {
+                candice.turnLeft();//wrong
+                candice.turnLeft();
+                candice.turnLeft();
+                candice.move();
+                candice.move();
+                candice.turnLeft();
+                candice.turnLeft();
+                candice.turnLeft();
+                candice.move();
+                candice.turnLeft();
+                candice.move();
+                candice.turnLeft();
+                candice.move();
+                
+                //lllmlmm
+                
+            }
+                   
             
             
     }
