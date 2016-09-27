@@ -22,8 +22,25 @@ public class a2q3 {
         //create a new city
             City mtl = new City();
             //create a robot
-            Robot candice = new Robot (mtl,3,0,Direction.EAST);
+            Robot candice = new Robot (mtl,3,7,Direction.EAST);
             //get candice to always return to (0,0)
+            while(candice.getAvenue()!=0)
+            {
+                while(candice.getDirection()!=Direction.WEST)
+                {
+                    candice.turnLeft();
+                }
+                    candice.move();                      
+            }
+            
+            while(candice.getStreet()!=0)
+            {
+                while(candice.getDirection()!=Direction.NORTH)
+                {
+                    candice.turnLeft();
+                }
+                    candice.move();                      
+            }
             
     }
 }
