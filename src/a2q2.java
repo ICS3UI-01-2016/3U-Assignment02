@@ -60,13 +60,13 @@ public class a2q2 {
                 candice.turnLeft();
                 while(candice.frontIsClear())
                 {
-                candice.move();//up until here works fine
-                }
-                while(candice.canPickThing())//presently not working-assign.notdone
-                {
-                    candice.pickThing();
-                }
+                    candice.move();//up until here works fine
                 
+                    if(candice.canPickThing())//presently not working-assign.notdone
+                    {
+                        candice.pickThing();
+                    }
+                }
             }    
-            }
+    }
 }
