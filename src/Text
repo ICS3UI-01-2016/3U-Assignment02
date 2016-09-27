@@ -1,0 +1,18 @@
+Question 1.
+
+a) false
+b) true
+c) false
+d) false
+e) false
+f) true
+g) false
+h) true
+
+Question 2
+They are the same, this is because in the second
+if statement, there is an ! in front of karel.canPickThing())
+
+therefore, instead of turning Right because he can pick the thing up
+he turns left because he can't. Similarly in the 1st if statement, Karel
+can only turn left if the option to pick the thing up isn't available.
