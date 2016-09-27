@@ -4,6 +4,8 @@ import becker.robots.Direction;
 import becker.robots.Robot;
 import becker.robots.Thing;
 import becker.robots.Wall;
+import static javafx.scene.paint.Color.color;
+import static javafx.scene.paint.Color.color;
 
 
 /*
@@ -44,13 +46,14 @@ public class A2Q5 {
         new Thing(af, 8, 8);
         new Thing(af, 2, 7);
 
+        karel.setLabel("K");
+        tina.setLabel("T");
 
 
 
 
 
-
-
+        // make Road
         new Wall(af, 1, 1, Direction.WEST);
         new Wall(af, 2, 1, Direction.WEST);
         new Wall(af, 3, 1, Direction.WEST);
@@ -61,6 +64,8 @@ public class A2Q5 {
         new Wall(af, 8, 1, Direction.WEST);
         new Wall(af, 9, 1, Direction.WEST);
         new Wall(af, 10, 1, Direction.WEST);
+        
+        // make sidewalk
         new Wall(af, 1, 2, Direction.EAST);
         new Wall(af, 2, 2, Direction.EAST);
         new Wall(af, 3, 2, Direction.EAST);
@@ -76,6 +81,8 @@ public class A2Q5 {
         new Wall(af, 6, 3, Direction.EAST);
         new Wall(af, 7, 3, Direction.EAST);
         new Wall(af, 10, 3, Direction.EAST);
+        
+        // make driveway
         new Wall(af, 2, 4, Direction.NORTH);
         new Wall(af, 2, 5, Direction.NORTH);
         new Wall(af, 2, 6, Direction.NORTH);
@@ -107,21 +114,20 @@ public class A2Q5 {
         new Wall(af, 9, 4, Direction.SOUTH);
 
         while (true) {
-            //Everytime he reaches sector 3, Karel moves without picking up
+            // Everytime he skips 3 Avenue and 3 Streets down the sidwalk, Karel moves without picking up
             if (karel.canPickThing() && (karel.getAvenue() == 3)) {
                 karel.turnLeft();
                 karel.move();
 
 
 
-                //
             } else if (karel.getDirection() == Direction.WEST && (!karel.frontIsClear())) {
                 karel.turnLeft();
 
             } else if (karel.getStreet() == 10 && (karel.getAvenue()) == 3) {
 
                 break;
-                //when he is near garage he turns right
+                //When karel is near garage he turns right
             } else if (!karel.frontIsClear()) {
                 karel.turnLeft();
                 karel.turnLeft();
@@ -132,7 +138,7 @@ public class A2Q5 {
                 // When karel has no snow to pick up he moves
             } else if (!karel.canPickThing() && (karel.getDirection() == Direction.WEST)) {
                 karel.move();
-                //Karel going throught the sidewalk
+                // Karel going through the sidewalk
             } else if (karel.getDirection() == Direction.SOUTH && (karel.frontIsClear())) {
                 karel.move();
             } else if (karel.canPickThing() && (karel.getAvenue() == 3)) {
@@ -161,25 +167,7 @@ public class A2Q5 {
                 break;
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
+        
     }
 }
