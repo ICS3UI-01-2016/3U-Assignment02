@@ -53,7 +53,6 @@ public class Q5 {
         new Wall(q5,2,4,Direction.SOUTH);
         new Wall(q5,2,5,Direction.SOUTH);
         new Wall(q5,2,6,Direction.SOUTH);
-        new Wall(q5,4,,Direction.EAST);
         
         
     }

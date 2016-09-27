@@ -20,13 +20,11 @@ public class Q2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args){
         
         City q2 = new City();
-        
         RobotSE rick = new RobotSE(q2,3,0,Direction.EAST);
         rick.setColor(Color.BLACK);
-        
         new Wall(q2,3,0,Direction.SOUTH);
         new Wall(q2,3,0,Direction.EAST);
         new Wall(q2,3,1,Direction.SOUTH);
@@ -42,14 +40,21 @@ public class Q2 {
         new Wall(q2,3,8,Direction.SOUTH);
         new Thing(q2,3,8);
         
-        while(!rick.frontIsClear()){
-            rick.turnLeft();
-            rick.move();
-            rick.turnRight();
-                if(rick.frontIsClear()){
+        while(rick.getDirection()==Direction.EAST)
+            if(!rick.frontIsClear()){
+                // Move around hurdle
+                rick.turnLeft();
                 rick.move();
-            }       
+                rick.turnRight();
+                rick.move();
+                rick.turnRight();
+                rick.move();
+                rick.turnLeft();
+            }else if(rick.frontIsClear()){
+                // Run forward
+                rick.move();
+                if(rick.canPickThing())
+                   break; 
+                } 
+            }
         }
-
-    }
-}
