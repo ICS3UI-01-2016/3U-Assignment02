@@ -22,5 +22,6 @@ public class WRexample {
         City wr = new City();
         Robot rick = new Robot(wr,1,5,Direction.NORTH);
         new Wall(wr,0,5,Direction.SOUTH);
+        
     }
 }

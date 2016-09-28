@@ -53,6 +53,7 @@ public class Q2 {
             }else if(rick.frontIsClear()){
                 // Run forward
                 rick.move();
+                // Stop at finish
                 if(rick.canPickThing())
                    break; 
                 } 
