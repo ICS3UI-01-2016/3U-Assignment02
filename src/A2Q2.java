@@ -60,7 +60,7 @@ public class A2Q2 {
             }
 
         }
-        // make rem pick up thing
+        // make rem stop at the finish line to pick Thing
         rem.pickThing();
     }
 }
