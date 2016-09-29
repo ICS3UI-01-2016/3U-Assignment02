@@ -23,9 +23,9 @@ public class A2Q4 {
     public static void main(String[] args) {
         // TODO code application logic here
         City kw = new City();
-        RobotSE KingJava = new RobotSE(kw,2,0,Direction.NORTH);
-        KingJava.setLabel("KingJava");
-        KingJava.setColor(Color.blue);
+        RobotSE kingJava = new RobotSE(kw,2,0,Direction.NORTH);
+        kingJava.setLabel("KingJava");
+        kingJava.setColor(Color.blue);
         new Wall(kw,1,1,Direction.NORTH);
         new Wall(kw,1,1,Direction.EAST);
         new Wall(kw,1,1,Direction.SOUTH);
@@ -51,18 +51,18 @@ public class A2Q4 {
         new Wall(kw,3,3,Direction.EAST);
         new Wall(kw,3,3,Direction.SOUTH);
         while(true){
-            KingJava.move();
-            KingJava.move();
-            KingJava.turnRight();
-            KingJava.move();
-            KingJava.move();
-            KingJava.turnRight();
-            KingJava.move();
-            KingJava.turnLeft();
-            KingJava.move();
-            KingJava.turnLeft();
-            KingJava.move();
-            KingJava.turnRight();
+            kingJava.move();
+            kingJava.move();
+            kingJava.turnRight();
+            kingJava.move();
+            kingJava.move();
+            kingJava.turnRight();
+            kingJava.move();
+            kingJava.turnLeft();
+            kingJava.move();
+            kingJava.turnLeft();
+            kingJava.move();
+            kingJava.turnRight();
         }
     }
 }

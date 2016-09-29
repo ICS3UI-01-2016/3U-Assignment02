@@ -23,9 +23,9 @@ public class A2Q1 {
     public static void main(String[] args) {
         // TODO code application logic here
         City kw = new City();
-        RobotSE Jim = new RobotSE(kw,1,1,Direction.EAST);
-        Jim.setLabel("Jim");
-        Jim.setColor(Color.blue);
+        RobotSE jim = new RobotSE(kw,1,1,Direction.EAST);
+        jim.setLabel("Jim");
+        jim.setColor(Color.blue);
         new Thing(kw,1,2);
         new Thing(kw,1,3);
         new Thing(kw,1,4);
@@ -36,12 +36,12 @@ public class A2Q1 {
         new Thing(kw,1,9);
         new Thing(kw,1,10);
         new Thing(kw,1,11);
-        Jim.move();
-        while(Jim.isBesideThing(IPredicate.aThing)){
-            if(Jim.countThingsInBackpack()<7){
-                Jim.pickThing();
+        jim.move();
+        while(jim.isBesideThing(IPredicate.aThing)){
+            if(jim.countThingsInBackpack()<7){
+                jim.pickThing();
             }
-            Jim.move();
+            jim.move();
         }
     }
 }

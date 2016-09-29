@@ -23,9 +23,9 @@ public class A2Q2 {
     public static void main(String[] args) {
         // TODO code application logic here
         City kw = new City();
-        RobotSE Jim = new RobotSE(kw,3,1,Direction.EAST);
-        Jim.setLabel("Jim");
-        Jim.setColor(Color.blue);
+        RobotSE jim = new RobotSE(kw,3,1,Direction.EAST);
+        jim.setLabel("Jim");
+        jim.setColor(Color.blue);
         new Wall(kw,3,1,Direction.SOUTH);
         new Wall(kw,3,2,Direction.SOUTH);
         new Wall(kw,3,3,Direction.SOUTH);
@@ -41,18 +41,18 @@ public class A2Q2 {
         new Wall(kw,3,7,Direction.EAST);
         Thing thing = new Thing(kw,3,9);
         thing.setColor(Color.red);
-        while(!Jim.canPickThing()){
-            if(!Jim.frontIsClear()){
-                Jim.turnLeft();
-                Jim.move();
-                Jim.turnRight();
-                Jim.move();
-                Jim.turnRight();
-                Jim.move();
-                Jim.turnLeft();
+        while(!jim.canPickThing()){
+            if(!jim.frontIsClear()){
+                jim.turnLeft();
+                jim.move();
+                jim.turnRight();
+                jim.move();
+                jim.turnRight();
+                jim.move();
+                jim.turnLeft();
             }
-            else if(Jim.frontIsClear()){
-                Jim.move();
+            else if(jim.frontIsClear()){
+                jim.move();
             }
         }
     }

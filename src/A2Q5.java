@@ -23,12 +23,12 @@ public class A2Q5 {
     public static void main(String[] args) {
         // TODO code application logic here
         City kw = new City();
-        RobotSE Jim = new RobotSE(kw,0,2,Direction.SOUTH);
-        Jim.setColor(Color.blue);
-        Jim.setLabel("Jim");
-        RobotSE Ben = new RobotSE(kw,0,2,Direction.SOUTH);
-        Ben.setColor(Color.green);
-        Ben.setLabel("Ben");
+        RobotSE jim = new RobotSE(kw,0,2,Direction.SOUTH);
+        jim.setColor(Color.blue);
+        jim.setLabel("Jim");
+        RobotSE ben = new RobotSE(kw,0,2,Direction.SOUTH);
+        ben.setColor(Color.green);
+        ben.setLabel("Ben");
         new Wall(kw,0,1,Direction.EAST);
         new Wall(kw,1,1,Direction.EAST);
         new Wall(kw,2,1,Direction.EAST);
@@ -117,41 +117,41 @@ public class A2Q5 {
         Thing thing16 = new Thing(kw,7,7);
         thing16.setColor(Color.white);
         while(true){
-            if(Jim.frontIsClear()&&Jim.isFacingEast()){
-                Jim.move();
-                if(Jim.canPickThing()){
-                    Jim.pickThing();
+            if(jim.frontIsClear()&&jim.isFacingEast()){
+                jim.move();
+                if(jim.canPickThing()){
+                    jim.pickThing();
                 }
             }
-            else if(Jim.frontIsClear()&&Jim.getAvenue()==2){
-                Jim.turnLeft();
+            else if(jim.frontIsClear()&&jim.getAvenue()==2){
+                jim.turnLeft();
             }
-            else if(!Jim.frontIsClear()&&Jim.getAvenue()==2){
-                Jim.turnRight();
-                if(Jim.frontIsClear()){
-                    Jim.move();
+            else if(!jim.frontIsClear()&&jim.getAvenue()==2){
+                jim.turnRight();
+                if(jim.frontIsClear()){
+                    jim.move();
             }
-                else if(!Jim.frontIsClear()){
-                    Jim.turnLeft();
+                else if(!jim.frontIsClear()){
+                    jim.turnLeft();
                     break;
                 }
             }
-            else if(!Jim.frontIsClear()){
-                Jim.turnAround();
-                while(Jim.frontIsClear()){
-                    Jim.move();
+            else if(!jim.frontIsClear()){
+                jim.turnAround();
+                while(jim.frontIsClear()){
+                    jim.move();
                 }
-                Jim.putAllThings();
-                Jim.turnLeft();
-                Jim.move();
+                jim.putAllThings();
+                jim.turnLeft();
+                jim.move();
             }
         }
-        while(Ben.frontIsClear()){
-            if(Ben.canPickThing()){
-                Ben.pickAllThings();
+        while(ben.frontIsClear()){
+            if(ben.canPickThing()){
+                ben.pickAllThings();
             }
-            Ben.move();
+            ben.move();
         }
-        Ben.putAllThings();
+        ben.putAllThings();
     }
 }
