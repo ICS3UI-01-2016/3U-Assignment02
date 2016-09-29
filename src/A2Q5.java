@@ -23,11 +23,11 @@ public class A2Q5 {
     public static void main(String[] args) {
 
         City af = new City();
-        // make shovelBot
+        // create shovelBot
         Robot karel = new Robot(af, 1, 3, Direction.SOUTH);
         Robot tina = new Robot(af, 1, 3, Direction.SOUTH);
 
-        // make snow
+        // create snow
         new Thing(af, 2, 3);
         new Thing(af, 2, 4);
         new Thing(af, 2, 5);
@@ -54,7 +54,7 @@ public class A2Q5 {
 
 
 
-        // make the Road
+        // Make the Road
         new Wall(af, 1, 1, Direction.WEST);
         new Wall(af, 2, 1, Direction.WEST);
         new Wall(af, 3, 1, Direction.WEST);
@@ -66,7 +66,7 @@ public class A2Q5 {
         new Wall(af, 9, 1, Direction.WEST);
         new Wall(af, 10, 1, Direction.WEST);
 
-        // make the sidewalk
+        // Make the sidewalk
         new Wall(af, 1, 2, Direction.EAST);
         new Wall(af, 2, 2, Direction.EAST);
         new Wall(af, 3, 2, Direction.EAST);
@@ -84,7 +84,7 @@ public class A2Q5 {
         new Wall(af, 10, 3, Direction.EAST);
         new Wall(af, 10, 3, Direction.SOUTH);
 
-        // make the driveway
+        // Make the driveway
         new Wall(af, 2, 4, Direction.NORTH);
         new Wall(af, 2, 5, Direction.NORTH);
         new Wall(af, 2, 6, Direction.NORTH);
@@ -129,7 +129,7 @@ public class A2Q5 {
             } else if (karel.getStreet() == 10 && (karel.getAvenue()) == 3) {
 
                 break;
-                //When karel is near garage he turns right
+                // When karel is near garage he turns right
             } else if (!karel.frontIsClear()) {
                 karel.turnLeft();
                 karel.turnLeft();
@@ -155,7 +155,7 @@ public class A2Q5 {
         }
         while (true) {
 
-            //Tina picks up all the left over snow and stores it at end
+            // Tina picks up all the left over snow and stores it at end
             if (tina.canPickThing()) {
 
                 tina.pickThing();

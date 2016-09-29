@@ -23,7 +23,7 @@ public class A2Q2 {
         Robot rem = new Robot(af, 1, 1, Direction.EAST);
         rem.setLabel("R");
 
-        // create hurdles
+        // create the hurdles
         new Wall(af, 1, 1, Direction.SOUTH);
         new Wall(af, 1, 2, Direction.SOUTH);
         new Wall(af, 1, 3, Direction.SOUTH);

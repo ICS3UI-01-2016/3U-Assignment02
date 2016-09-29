@@ -53,7 +53,7 @@ public class A2Q4 {
         Robot rem = new Robot(af, 2, 1, Direction.NORTH);
 
         while (true) {
-            // make Rem rotate around the castle
+            // Make Rem rotate around the castle
             if (rem.frontIsClear()) {
                 rem.turnLeft();
                 rem.turnLeft();
@@ -75,7 +75,7 @@ public class A2Q4 {
 
 
 
-                // make Rem go around the towers
+                // Make Rem go around the towers
             } else if (!rem.frontIsClear()) {
                 rem.turnLeft();
                 rem.move();

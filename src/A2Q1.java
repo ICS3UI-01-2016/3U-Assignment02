@@ -20,9 +20,9 @@ public class A2Q1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // create a city
+        // create a City
         City af = new City();
-        // create a robot
+        // create a Robot
         Robot rem = new Robot(af, 1, 1, Direction.EAST);
         rem.move();
 
@@ -39,7 +39,7 @@ public class A2Q1 {
         new Thing(af, 1, 11);
 
 
-        // Move the robot 7 times
+        // Move the Robot 7 times
         while (true) {
             //
             if (rem.countThingsInBackpack() < 7) {

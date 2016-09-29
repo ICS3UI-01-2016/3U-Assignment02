@@ -23,12 +23,12 @@ public class A2Q3 {
         Robot rem = new Robot(af, 6, 4, Direction.EAST);
 
         rem.setLabel("R");
-        // get Rem to face North automatically 
+        // Get Rem to face North automatically 
         while (rem.getDirection() != Direction.NORTH) {
             rem.turnLeft();
 
         }
-        // get Rem to Street 0
+        // Get Rem to Street 0
         while (rem.getStreet() != 0) {
             rem.move();
         }
@@ -37,7 +37,7 @@ public class A2Q3 {
             rem.turnLeft();
 
         }
-        // get Rem to Avenue 0 
+        // Get Rem to Avenue 0 
         while (rem.getAvenue() != 0) {
             rem.move();
         }
