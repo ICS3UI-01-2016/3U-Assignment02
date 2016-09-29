@@ -20,26 +20,26 @@ public class A2Q3 {
     public static void main(String[] args) {
         
         City af = new City();
-        Robot Rem = new Robot(af,6,4,Direction.EAST);
+        Robot rem = new Robot(af,6,4,Direction.EAST);
         
-        Rem.setLabel("R");
+        rem.setLabel("R");
         // get Rem to face North
-        while(Rem.getDirection() !=Direction.NORTH){
-            Rem.turnLeft();
+        while(rem.getDirection() !=Direction.NORTH){
+            rem.turnLeft();
             
         }
         // get Rem to Street 0
-        while(Rem.getStreet() != 0){
-            Rem.move();
+        while(rem.getStreet() != 0){
+            rem.move();
         }
         
-        if(Rem.getAvenue() > 0){
-            Rem.turnLeft();
+        if(rem.getAvenue() > 0){
+            rem.turnLeft();
         
         }    
         // get Rem to Avenue 0 
-          while(Rem.getAvenue() != 0){
-            Rem.move();
+          while(rem.getAvenue() != 0){
+              rem.move();
         }
         
     }
