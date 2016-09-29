@@ -10,7 +10,6 @@ import becker.robots.Thing;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author baayl
@@ -21,46 +20,43 @@ public class A2Q1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-           // create city
-           City af = new City();
-           // create robot
-           Robot rem = new Robot(af,1,1,Direction.EAST);
-           rem.move();
-           
-           
-           new Thing(af,1,2);
-           new Thing(af,1,3);
-           new Thing(af,1,4);
-           new Thing(af,1,5);
-           new Thing(af,1,6);
-           new Thing(af,1,7);
-           new Thing(af,1,8);
-           new Thing(af,1,9);
-           new Thing(af,1,10);
-           new Thing(af,1,11);
+        // create city
+        City af = new City();
+        // create robot
+        Robot rem = new Robot(af, 1, 1, Direction.EAST);
+        rem.move();
 
-           
-           // Move 7 times
-           while(true){
+
+        new Thing(af, 1, 2);
+        new Thing(af, 1, 3);
+        new Thing(af, 1, 4);
+        new Thing(af, 1, 5);
+        new Thing(af, 1, 6);
+        new Thing(af, 1, 7);
+        new Thing(af, 1, 8);
+        new Thing(af, 1, 9);
+        new Thing(af, 1, 10);
+        new Thing(af, 1, 11);
+
+
+        // Move 7 times
+        while (true) {
             //
-            if (rem.countThingsInBackpack() < 7){
+            if (rem.countThingsInBackpack() < 7) {
                 rem.pickThing();
                 rem.move();
-           }else {
-                   break;
-           
-           
+            } else {
+                break;
+
+
+            }
+
         }
-            
-           }
-           rem.move();
-           rem.move();
-           rem.move();
-               
-  
-   
-    }      
+        rem.move();
+        rem.move();
+        rem.move();
+
+
 
     }
-    
-
+}

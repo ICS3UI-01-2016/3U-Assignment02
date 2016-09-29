@@ -6,8 +6,6 @@ import becker.robots.Thing;
 import becker.robots.Wall;
 import java.awt.Color;
 
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -23,12 +21,12 @@ public class A2Q5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         City af = new City();
         // make shovelBot
         Robot karel = new Robot(af, 1, 3, Direction.SOUTH);
         Robot tina = new Robot(af, 1, 3, Direction.SOUTH);
-        
+
         // make snow
         new Thing(af, 2, 3);
         new Thing(af, 2, 4);
@@ -67,7 +65,7 @@ public class A2Q5 {
         new Wall(af, 8, 1, Direction.WEST);
         new Wall(af, 9, 1, Direction.WEST);
         new Wall(af, 10, 1, Direction.WEST);
-        
+
         // make sidewalk
         new Wall(af, 1, 2, Direction.EAST);
         new Wall(af, 2, 2, Direction.EAST);
@@ -85,7 +83,7 @@ public class A2Q5 {
         new Wall(af, 7, 3, Direction.EAST);
         new Wall(af, 10, 3, Direction.EAST);
         new Wall(af, 10, 3, Direction.SOUTH);
-        
+
         // make driveway
         new Wall(af, 2, 4, Direction.NORTH);
         new Wall(af, 2, 5, Direction.NORTH);
@@ -172,6 +170,6 @@ public class A2Q5 {
 
             }
         }
-        
+
     }
 }

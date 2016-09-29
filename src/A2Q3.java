@@ -18,30 +18,29 @@ public class A2Q3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         City af = new City();
-        Robot rem = new Robot(af,6,4,Direction.EAST);
-        
+        Robot rem = new Robot(af, 6, 4, Direction.EAST);
+
         rem.setLabel("R");
         // get Rem to face North
-        while(rem.getDirection() !=Direction.NORTH){
+        while (rem.getDirection() != Direction.NORTH) {
             rem.turnLeft();
-            
+
         }
         // get Rem to Street 0
-        while(rem.getStreet() != 0){
+        while (rem.getStreet() != 0) {
             rem.move();
         }
-        
-        if(rem.getAvenue() > 0){
+
+        if (rem.getAvenue() > 0) {
             rem.turnLeft();
-        
-        }    
-        // get Rem to Avenue 0 
-          while(rem.getAvenue() != 0){
-              rem.move();
+
         }
-        
+        // get Rem to Avenue 0 
+        while (rem.getAvenue() != 0) {
+            rem.move();
+        }
+
     }
-    
 }
