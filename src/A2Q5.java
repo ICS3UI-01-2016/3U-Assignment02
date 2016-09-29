@@ -54,7 +54,7 @@ public class A2Q5 {
 
 
 
-        // make Road
+        // make the Road
         new Wall(af, 1, 1, Direction.WEST);
         new Wall(af, 2, 1, Direction.WEST);
         new Wall(af, 3, 1, Direction.WEST);
@@ -66,7 +66,7 @@ public class A2Q5 {
         new Wall(af, 9, 1, Direction.WEST);
         new Wall(af, 10, 1, Direction.WEST);
 
-        // make sidewalk
+        // make the sidewalk
         new Wall(af, 1, 2, Direction.EAST);
         new Wall(af, 2, 2, Direction.EAST);
         new Wall(af, 3, 2, Direction.EAST);
@@ -84,7 +84,7 @@ public class A2Q5 {
         new Wall(af, 10, 3, Direction.EAST);
         new Wall(af, 10, 3, Direction.SOUTH);
 
-        // make driveway
+        // make the driveway
         new Wall(af, 2, 4, Direction.NORTH);
         new Wall(af, 2, 5, Direction.NORTH);
         new Wall(af, 2, 6, Direction.NORTH);
