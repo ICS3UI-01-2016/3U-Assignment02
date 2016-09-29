@@ -2,6 +2,7 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.Thing;
 import becker.robots.Wall;
 
 /*
@@ -22,8 +23,13 @@ public class Excercise2ProgrammingExcercisesQ5 {
         // create a city
         City km = new City();
         
-        // create robot
-        Robot cliff = new Robot(km,0,3,Direction.SOUTH);
+        // create robots
+        Robot karel = new Robot(km,0,3,Direction.SOUTH);
+        Robot tina = new Robot (km,0,3,Direction.SOUTH);
+        
+        // label karel and tina
+        karel.setLabel("k");
+        tina.setLabel("t");
         
         // create roads, sidewa;l , and driveway
         new Wall (km,0,1,Direction.WEST);
@@ -88,8 +94,47 @@ public class Excercise2ProgrammingExcercisesQ5 {
         new Wall (km,7,8,Direction.NORTH);
         
         // put snow in sidewalk
+        new Thing (km,1,3);
+        new Thing (km,2,3);
+        new Thing (km,4,3);
+        new Thing (km,7,3);
         
-   
+        // put sonow on driveway
+        new Thing (km,1,4);
+        new Thing (km,1,5);
+        new Thing (km,1,6);
+        new Thing (km,2,5);
+        new Thing (km,2,7);
+        new Thing (km,4,4);
+        new Thing (km,4,5);
+        new Thing (km,7,4);
+        new Thing (km,7,8);
+        new Thing (km,8,4);
+        new Thing (km,8,5);
+        new Thing (km,8,7);
+        
+   // create code for karel to clean driveways
+        while(karel.frontIsClear()){
+            karel.turnLeft();
+           if(!karel.frontIsClear())
+        {
+            karel.turnLeft();
+            karel.turnLeft();
+            karel.turnLeft();
+        }
+        {
+            if(karel.frontIsClear()){
+                karel.move();
+            }
+            if(karel.canPickThing()){
+                karel.pickThing();
+            }
+            if(!karel.frontIsClear()){
+                karel.turnLeft();
+                karel.turnLeft();
+                karel.turnLeft();
+            }
+            
     
     
     
@@ -98,6 +143,7 @@ public class Excercise2ProgrammingExcercisesQ5 {
     
     
     
-    
+        }
     }
+}
 }
