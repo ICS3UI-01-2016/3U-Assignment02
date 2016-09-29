@@ -1,0 +1,3 @@
+The two statements are opposites of each other. The first statement makes karel turn right if he can
+pick up an item, otherwise he is made to turn left. The second statement makes him turn LEFT if he
+can pick up an item, and made to turn right otherwise
