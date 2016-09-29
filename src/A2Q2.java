@@ -23,8 +23,8 @@ public class A2Q2 {
      */
     public static void main(String[] args) {
         City af = new City();
-        Robot Rem = new Robot(af,1,1,Direction.EAST);
-        Rem.setLabel("R");
+        Robot rem = new Robot(af,1,1,Direction.EAST);
+        rem.setLabel("R");
         
         // create hurdles
         new Wall(af,1,1,Direction.SOUTH);
@@ -43,28 +43,28 @@ public class A2Q2 {
         new Thing(af,1,9);
        
         // make rem 'jump' hurdles
-        while (!Rem.canPickThing()) { 
+        while (!rem.canPickThing()) { 
 
-            if (!Rem.frontIsClear()) {
-                Rem.turnLeft();
-                Rem.move();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.move();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.move();
-                Rem.turnLeft();
+            if (!rem.frontIsClear()) {
+                rem.turnLeft();
+                rem.move();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.move();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.move();
+                rem.turnLeft();
             }
-            if (Rem.frontIsClear()) {
-                Rem.move();
+            if (rem.frontIsClear()) {
+                rem.move();
             }
             
         }
                 // make rem pick up thing
-                Rem.pickThing();
+                rem.pickThing();
     }
     
 }
