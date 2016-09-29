@@ -24,8 +24,8 @@ public class A2Q1 {
            // create city
            City af = new City();
            // create robot
-           Robot Rem = new Robot(af,1,1,Direction.EAST);
-           Rem.move();
+           Robot rem = new Robot(af,1,1,Direction.EAST);
+           rem.move();
            
            
            new Thing(af,1,2);
@@ -43,9 +43,9 @@ public class A2Q1 {
            // Move 7 times
            while(true){
             //
-            if (Rem.countThingsInBackpack() < 7){
-                Rem.pickThing();
-                Rem.move();
+            if (rem.countThingsInBackpack() < 7){
+                rem.pickThing();
+                rem.move();
            }else {
                    break;
            
@@ -53,9 +53,9 @@ public class A2Q1 {
         }
             
            }
-           Rem.move();
-           Rem.move();
-           Rem.move();
+           rem.move();
+           rem.move();
+           rem.move();
                
   
    
