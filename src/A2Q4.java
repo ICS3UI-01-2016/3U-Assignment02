@@ -50,25 +50,25 @@ public class A2Q4 {
         
        
         
-        Robot Rem = new Robot(af, 2, 1, Direction.NORTH);
+        Robot rem = new Robot(af, 2, 1, Direction.NORTH);
 
         while (true) {
             // Rem rotating around the castle
-            if (Rem.frontIsClear()) {
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.move();
-                Rem.move();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.move();
-                Rem.move();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.turnLeft();
-                Rem.move();
+            if (rem.frontIsClear()) {
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.move();
+                rem.move();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.move();
+                rem.move();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.turnLeft();
+                rem.move();
 
 
 
@@ -76,9 +76,9 @@ public class A2Q4 {
 
 
                 //Rem going around the towers
-            } else if (!Rem.frontIsClear()) {
-                Rem.turnLeft();
-                Rem.move();
+            } else if (!rem.frontIsClear()) {
+                rem.turnLeft();
+                rem.move();
 
 
 
