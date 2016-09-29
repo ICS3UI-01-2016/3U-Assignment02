@@ -1,0 +1,13 @@
+1.
+a. this.getAvenue() > 0             (True)
+b. this.getAvenue() <= 5            (True)
+c. this.getStreet() != 1            (False)
+d. !(this.getStreet() == 1)         (True)    
+e. this.frontIsClear()              (False)
+f. !this.frontIsClear()             (True)
+g. !!this.frontIsClear()            (False)
+h. this.frontIsClear() == false     (True)
+
+2.
+they act the same way because they are asking if he cannot pick up a thing than turn left
+if it cannot then turn right
