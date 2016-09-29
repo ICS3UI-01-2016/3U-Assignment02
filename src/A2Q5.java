@@ -2,6 +2,7 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.Thing;
 import becker.robots.Wall;
 
 /*
@@ -21,7 +22,7 @@ public class A2Q5 {
     public static void main(String[] args) {
         // TODO code application logic here
          City PH = new City ();
-         Robot Kris = new Robot (PH, 0,3, Direction.SOUTH);
+         Robot kris = new Robot (PH, 1,3, Direction.SOUTH);
          
          new Wall (PH, 1,2, Direction. EAST);
          new Wall (PH, 2,2, Direction. EAST);
@@ -68,16 +69,50 @@ public class A2Q5 {
          new Wall (PH, 8,5, Direction. NORTH);
          new Wall (PH, 8,6, Direction. NORTH);
          new Wall (PH, 8,7, Direction. NORTH);
-         new Wall (PH, 8,7, Direction. EAST);
-         new Wall (PH, 9,7, Direction. EAST);
+         new Wall (PH, 8,8, Direction. NORTH);
+         new Wall (PH, 8,8, Direction. EAST);
+         new Wall (PH, 9,8, Direction. EAST);
          new Wall (PH, 9,4, Direction. SOUTH);
          new Wall (PH, 9,5, Direction. SOUTH);
          new Wall (PH, 9,6, Direction. SOUTH);
          new Wall (PH, 9,7, Direction. SOUTH);
+         new Wall (PH, 9,8, Direction. SOUTH);
          new Wall (PH, 10,3, Direction. EAST);
-         new Wall (PH, 2,1, Direction. WEST);
-         new Wall (PH, 2,1, Direction. WEST);
-                
+         new Wall (PH, 10,3, Direction. SOUTH);
+         new Thing (PH, 2,3);
+         new Thing (PH, 3,3);
+         new Thing (PH, 5,3);
+         new Thing (PH, 8,3 );
+         new Thing (PH, 2,4);
+         new Thing (PH, 2,5);
+         new Thing (PH, 2,6);
+         new Thing (PH, 3,5);
+         new Thing (PH, 3,7);
+         new Thing (PH, 5,4);
+         new Thing (PH, 5,5);
+         new Thing (PH, 8,4);
+         new Thing (PH, 9,4);
+         new Thing (PH, 9,5);
+         new Thing (PH, 9,7);
+         new Thing (PH, 8,8);
          
-    }
-}
+         
+           
+                 
+             }
+             
+             
+             
+         }
+             }
+                       
+         
+        
+         
+         
+         
+         
+         
+    
+
+
