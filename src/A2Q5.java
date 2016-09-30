@@ -96,6 +96,39 @@ public class A2Q5 {
          new Thing (PH, 9,7);
          new Thing (PH, 8,8);
          
+         kris.move();
+         kris.turnLeft();
+        
+         
+         while(kris.frontIsClear()){
+             kris.pickThing();
+             kris.move();
+          
+         while(!kris.frontIsClear()){
+                 kris.turnLeft();
+                 kris.turnLeft();
+                 kris.turnLeft();
+                 kris.move();
+                 kris.turnLeft();
+                 kris.turnLeft();
+                 kris.turnLeft();
+                 kris.move():
+                     
+                 }
+                
+                 
+                 
+                 
+               
+                 
+                 
+             }
+         
+             
+                 
+                 
+             }
+         }
          
            
                  
@@ -103,8 +136,8 @@ public class A2Q5 {
              
              
              
-         }
-             }
+         
+             
                        
          
         
