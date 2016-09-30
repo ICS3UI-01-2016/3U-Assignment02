@@ -22,6 +22,7 @@ public class Q5 {
         
         City q5 = new City();
         
+        // Create road
         new Wall(q5,0,0,Direction.WEST);
         new Wall(q5,1,0,Direction.WEST);
         new Wall(q5,2,0,Direction.WEST);
@@ -42,7 +43,16 @@ public class Q5 {
         new Wall(q5,7,1,Direction.EAST);
         new Wall(q5,8,1,Direction.EAST);
         new Wall(q5,9,1,Direction.EAST);
+        
+        // Create sidewalk
         new Wall(q5,0,2,Direction.EAST);
+        new Wall(q5,3,2,Direction.EAST);
+        new Wall(q5,5,2,Direction.EAST);
+        new Wall(q5,6,2,Direction.EAST);
+        new Wall(q5,9,2,Direction.EAST);
+        new Wall(q5,9,2,Direction.SOUTH);
+        
+        // Create driveway 1
         new Wall(q5,1,3,Direction.NORTH);
         new Wall(q5,1,4,Direction.NORTH);
         new Wall(q5,1,5,Direction.NORTH);
@@ -53,6 +63,12 @@ public class Q5 {
         new Wall(q5,2,4,Direction.SOUTH);
         new Wall(q5,2,5,Direction.SOUTH);
         new Wall(q5,2,6,Direction.SOUTH);
+        
+        // Create driveway 2
+        // Create driveway 3
+        // Create snow (things)
+        
+        
         
         
     }
