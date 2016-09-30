@@ -2,6 +2,7 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.RobotSE;
 import becker.robots.Wall;
 import java.awt.Color;
 
@@ -48,15 +49,22 @@ public class Q4 {
         new Wall(q4, 3, 3, Direction.EAST);
         new Wall(q4, 2, 3, Direction.EAST);
 
-        Robot rick = new Robot(q4, 0, 0, Direction.EAST);
+        RobotSE rick = new RobotSE(q4, 0, 0, Direction.EAST);
         rick.setColor(Color.black);
 
-        if(rick.getAvenue() == 0){
-            if(rick.getStreet() == 0 || rick.getStreet() == 3){
-                rick.turnRight();
-            }
+        while (rick.frontIsClear()) {
+            rick.move();
+            rick.move();
+            rick.turnRight();
+            rick.move();
+            rick.turnLeft();
+            rick.move();
+            rick.turnLeft();
+            rick.move();
+            rick.turnRight();
+            rick.move();
+            rick.move();
+            rick.turnRight();
         }
-
     }
 }
-
