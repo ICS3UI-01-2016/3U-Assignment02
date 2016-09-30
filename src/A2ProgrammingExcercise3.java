@@ -22,17 +22,24 @@ public class A2ProgrammingExcercise3 {
         City bo = new City();
         Robot ss = new Robot(bo, 4, 5, Direction.EAST);
 
-        //return to 0,0
-        while (ss.getStreet() > 0 && ss.getAvenue() > 0) {
+        //face north
+        while (ss.getDirection() != Direction.NORTH) {
             ss.turnLeft();
-            ss.getDirection();
-            if (ss.getStreet() == 0) {
-                if (ss.getAvenue() == 0) {
+        }
+        while (ss.getStreet() != 0 && ss.getAvenue() != 0) {
+            ss.move();
+        }
 
-                    break;
+        if (ss.getStreet() == 0) {
+            ss.turnLeft();
 
-                }
 
+        }
+        //ending the loop when 0,0 is reached
+        while (ss.getDirection() != Direction.EAST) {
+            ss.move();
+            if (ss.getAvenue() == 0 && ss.getStreet() == 0) {
+            break;
             }
         }
     }
