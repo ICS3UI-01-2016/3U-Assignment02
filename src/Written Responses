@@ -1,0 +1,16 @@
+1.
+1a. true
+1b. true
+1c. false
+1d. false
+1e. false
+1f. true
+1g. false
+1h. true
+
+2.
+Yes they behave the same way, in a way because like if statements there
+has to be a condition met or they won't activate, it's the same way with
+else statements as the if statement has to NOT activate for the else statement
+to be be activated.
+ 
