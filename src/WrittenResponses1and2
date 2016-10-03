@@ -1,0 +1,14 @@
+1. a) true
+   b) true
+   c) false
+   d) false
+   e) false
+   f) true
+   g) false
+   h) true
+
+2. Yes, both the commands are the same, since both commands contain an if 
+statement which tells the robot to turn right and left. Both statements are the 
+same as statement 2 has an exclamation mark in front of the robots name which
+tells that if the statement is not true then follow the next instruction which
+is the same as statement 1.
