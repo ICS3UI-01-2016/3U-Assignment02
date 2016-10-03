@@ -115,28 +115,80 @@ public class Q5 {
         RobotSE tina = new RobotSE(q5, 0, 2, Direction.SOUTH);
         tina.setColor(Color.black);
 
-     
-        // karel looks for a driveway (repeating loop)
-        while (karel.getAvenue() == 2 && karel.frontIsClear()) {
-            karel.move();
+        while(karel.frontIsClear()){
+            // Determine if driveway
             karel.turnLeft();
+            // Driveway not found
+            if (!karel.frontIsClear()) {
+                karel.turnRight();
+                karel.move();
+            }
+            else{
+                // Driveway found
+                while(karel.frontIsClear()){
+                    karel.move();
+                    if (karel.canPickThing()) {
+                      karel.pickThing();
+                    }else if(!karel.canPickThing() && karel.frontIsClear() ){
+                        karel.move();
+                    }else{
+                        karel.turnAround();
+                        do{
+                        karel.move();
+                        }while(karel.getAvenue() !=2);
+                        karel.putAllThings();
+                        karel.turnLeft();
+                        karel.move();
+                        break;
+                    }  
+                }
+                }
+            }
+        }
+        
+        //overall loop
+            //determine if driveway
+                //turn left
+                // if (wall) {
+                // turn right
+                // move
+            // }else{
+            // found driveway
+                //loop while (frontIsClear){
+                // move
+                // if can pick thing {
+                    // pick thing
+                //} turn around
+        // while front is clear
+            // move
+        // }
+        // turn left
+        // move
+        
+        
+        
+        
+        // karel looks for a driveway (loop while front is clear)
+        //while (karel.getAvenue() == 2 && karel.frontIsClear()) {
+            //karel.move();
+            //karel.turnLeft();
             // driveway found, turn into driveway
         
-                    while (karel.getAvenue() == 2 && karel.frontIsClear()) {
-                karel.move();
+                    //while (karel.getAvenue() == 2 && karel.frontIsClear()) {
+                //karel.move();
                 // snow found, shovel snow
-                if (karel.canPickThing()) {
-                    karel.pickThing();
+               // if (karel.canPickThing()) {
+                    //karel.pickThing();
                     // no snow but not end of driveway; move forward
-               // } else if (!karel.canPickThing() && karel.frontIsClear()) {
-                 //   karel.move();
+              // } else if (!karel.canPickThing() && karel.frontIsClear()) {
+                    //karel.move();
                     // end of driveway; turn around and go back to sidewalk
-               // } else if (!karel.frontIsClear()) {
-                //    karel.turnAround();
-               // }if (karel.getAvenue() == 2 && !karel.frontIsClear()) {
-                //karel.turnLeft();
+                //} else if (!karel.frontIsClear()) {
+                    //karel.turnAround();
+                //}if (karel.getAvenue() == 2 && !karel.frontIsClear()) {
+                //`karel.turnLeft();
                
-            } 
+            //} 
                     // do {
                     //    karel.move();
                    // } while (karel.getAvenue() != 2);
@@ -145,9 +197,6 @@ public class Q5 {
                     
                 }
                 // driveway not found, move along
-            }
-           
             
-    }}
         
     
