@@ -115,35 +115,39 @@ public class Q5 {
         RobotSE tina = new RobotSE(q5, 0, 2, Direction.SOUTH);
         tina.setColor(Color.black);
 
-        karel.move();
-
+     
         // karel looks for a driveway (repeating loop)
         while (karel.getAvenue() == 2 && karel.frontIsClear()) {
+            karel.move();
             karel.turnLeft();
             // driveway found, turn into driveway
-            if (karel.frontIsClear()) {
+        
+                    while (karel.getAvenue() == 2 && karel.frontIsClear()) {
                 karel.move();
                 // snow found, shovel snow
                 if (karel.canPickThing()) {
                     karel.pickThing();
-                    karel.move();
-                // no snow but not end of driveway; move forward
-                } else if (!karel.canPickThing() && karel.frontIsClear()) {
-                    karel.move();
-                // end of driveway; turn around and go back to sidewalk
-                } else if (!karel.frontIsClear()) {
-                    karel.turnAround();
-                    do {
-                        karel.move();
-                    } while (karel.getAvenue() != 2);
-                    karel.putAllThings();
-                    karel.turnLeft();
-                    karel.move();
+                    // no snow but not end of driveway; move forward
+               // } else if (!karel.canPickThing() && karel.frontIsClear()) {
+                 //   karel.move();
+                    // end of driveway; turn around and go back to sidewalk
+               // } else if (!karel.frontIsClear()) {
+                //    karel.turnAround();
+               // }if (karel.getAvenue() == 2 && !karel.frontIsClear()) {
+                //karel.turnLeft();
+               
+            } 
+                    // do {
+                    //    karel.move();
+                   // } while (karel.getAvenue() != 2);
+                    //karel.putAllThings();
+                   // karel.turnLeft();
+                    
                 }
-            // driveway not found, move along
-            }else{
-                karel.move();
+                // driveway not found, move along
             }
-        }
-    }
-}
+           
+            
+    }}
+        
+    
