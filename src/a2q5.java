@@ -113,26 +113,35 @@ public class a2q5 {
         new Thing(mtl, 8, 3);
         new Thing(mtl, 8, 4);
         new Thing(mtl, 8, 6);
-        //while loop
-        while (!candice.frontIsClear()) 
+        //overall loop
+        while(candice.frontIsClear()) 
+        {
+            candice.turnLeft();//determine if driveway is clear
+        }
+        if (!candice.frontIsClear()) 
         {
             candice.turnLeft();
-        }
-        if (candice.frontIsClear()) 
-        {
-            //clean the driveway pickthing?move?
+            candice.turnLeft();
+            candice.turnLeft();
             candice.move();
+        }else{
+            //found driveway
+            while(candice.frontIsClear())
+            {
+                candice.move();
+            }
         }
-        if(candice.canPickThing())  
+            if(candice.canPickThing())  
         {
             candice.pickThing();
         }
-        if(!candice.canPickThing())
-        {
-            candice.turnLeft();
-        }
+        //turn around
         while(candice.frontIsClear())
         {
+            candice.move();
+        }
+        {
+            candice.turnLeft();
             candice.move();
         }
 
