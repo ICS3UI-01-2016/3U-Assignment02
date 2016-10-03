@@ -2,6 +2,7 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.RobotSE;
 import becker.robots.Thing;
 import becker.robots.Wall;
 
@@ -98,54 +99,67 @@ public class A2Q5 {
          
          kris.move();
          kris.turnLeft();
-        
          
-         while(kris.frontIsClear()){
-             kris.pickThing();
+         
+         if (!kris.frontIsClear()){
+             kris.turnLeft();
+             kris.turnLeft();
+             kris.turnLeft();
              kris.move();
-          
-         while(!kris.frontIsClear()){
-                 kris.turnLeft();
-                 kris.turnLeft();
-                 kris.turnLeft();
-                 kris.move();
-                 kris.turnLeft();
-                 kris.turnLeft();
-                 kris.turnLeft();
-                 kris.move():
-                     
-                 }
-                
-                 
-                 
-                 
-               
-                 
-                 
-             }
-         
              
-                 
-                 
-             }
-         }
-         
-           
-                 
-             }
-             
-             
-             
-         
-             
+         } else {
+              while(kris.frontIsClear()){
+                  kris.move();
+                  if(kris.canPickThing())
+                  kris.pickThing();
+              }
+              while (!kris.frontIsClear()){
+                  kris.turnLeft();
+                  kris.turnLeft();
+                  kris.turnLeft();
+                  kris.move();
+                  kris.turnLeft();
+                  kris.turnLeft();
+                  kris.turnLeft();
+                  if(kris.canPickThing()){
+                  kris.pickThing();
+                while (kris.frontIsClear()){
+                    kris.move();
+                    
+                    
+                }
+                      
+                      
+                  }
+                      
+                  }
+                      }
+                      
                        
+                     
+                      
+                     
+                      }
+                     
+                  
+                  }
+                  
+                          
+              
+                  
+                  
+             
+           
+             
          
-        
+             
+           
+             
+           
+              
+                    
+                 
+             
          
-         
-         
-         
-         
-    
-
+   
 
