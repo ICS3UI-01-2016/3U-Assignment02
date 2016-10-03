@@ -1,0 +1,15 @@
+1. 
+    a)True
+    b)True
+    c)False
+    d)False
+    e)False
+    f)True
+    g)False
+    h)True
+
+2.
+    The if statements will behave the same because, if karel is using the first
+ statement, he will turn left if he cannot pickthing while, during statement
+two, it is the same thing. It works for turning right also if they can both 
+pickthing's.
