@@ -123,26 +123,46 @@ public class A2Q5 {
                   kris.turnLeft();
                   if(kris.canPickThing()){
                   kris.pickThing();
-                while (kris.frontIsClear()){
+                  
+         
+              } else {
+                  while(kris.frontIsClear()){
                     kris.move();
+                    kris.move();
+                    kris.pickThing();
+                    
+               
+                  
+                  
+                  
+                  
+                  
                     
                     
-                }
+                        
+                    
+              
+              
+                    
+                  
+                  
+                    
+                    
+                
                       
                       
-                  }
+                  
                       
-                  }
-                      }
+                  
+                      
                       
                        
                      
                       
                      
-                      }
-                     
+                      
                   
-                  }
+                  
                   
                           
               
