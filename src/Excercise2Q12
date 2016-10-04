@@ -1,0 +1,14 @@
+1 a. true
+  b. true
+  c. false
+  d. false
+  e. false
+  f. true
+  g. false
+  h. true
+  
+2. Yes, both statements do behave the same, as statement 2 is the same as statement 1 but the 
+exclamation mark at the beginning of the statement 2 makes the first line of statement 2 opposite of 
+of the first line in statement 1. This means the second and third line are flipped in statement 2 when
+comparing to the 2nd and 3rd command in statement 1, all due to the exclamation mark at the beginning
+of statement 2. Therefore, both of these if-else statements accomplish the same task.
