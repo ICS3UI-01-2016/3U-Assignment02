@@ -54,50 +54,48 @@ public class Excercise2ProgrammingExcercisesQ4 {
 
         int moves = 0;
         while (true) {
-        cliff.move();
-        cliff.move();
-        cliff.turnLeft();
-        cliff.turnLeft();
-        cliff.turnLeft();
-        cliff.move();
-        cliff.turnLeft();
-        cliff.move();
-        cliff.turnLeft();
-        cliff.move();
-        cliff.turnLeft();
-        cliff.turnLeft();
-        cliff.turnLeft();
-        cliff.move();
-        cliff.move();
-        cliff.turnLeft();
-        cliff.turnLeft();
-        cliff.turnLeft();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            cliff.move();
+            cliff.move();
+            cliff.turnLeft();
+            cliff.turnLeft();
+            cliff.turnLeft();
+            cliff.move();
+            cliff.turnLeft();
+            cliff.move();
+            cliff.turnLeft();
+            cliff.move();
+            cliff.turnLeft();
+            cliff.turnLeft();
+            cliff.turnLeft();
+            cliff.move();
+            cliff.move();
+            cliff.turnLeft();
+            cliff.turnLeft();
+            cliff.turnLeft();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
-
-

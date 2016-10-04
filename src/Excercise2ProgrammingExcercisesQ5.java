@@ -128,49 +128,32 @@ public class Excercise2ProgrammingExcercisesQ5 {
                     if (karel.canPickThing()) {
                         karel.pickThing();
                     }
-                    }
+                }
                 // make karel turn around and head back to sidewalk
-                    karel.turnAround();
-                    
-                    
-            
-                    while (karel.frontIsClear()){
-                        karel.move();
-                    }
-                    // put karel in position to head down sidewalk to search for more driveways
-                    karel.turnLeft();
+                karel.turnAround();
+
+
+
+                while (karel.frontIsClear()) {
                     karel.move();
                 }
-
-
+                // put karel in position to head down sidewalk to search for more driveways
+                karel.turnLeft();
+                karel.move();
             }
+
+
+        }
         karel.putAllThings();
 
         // make tina clean sidewalk
-        while(tina.frontIsClear()){
-            if(tina.canPickThing())
+        while (tina.frontIsClear()) {
+            if (tina.canPickThing()) {
                 tina.pickThing();
+            }
             tina.move();
         }
         tina.putAllThings();
 
-        }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-

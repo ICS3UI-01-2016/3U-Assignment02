@@ -43,7 +43,7 @@ public class Excercise2ProgrammingExcercisesQ3 {
                 cliff.turnLeft();
             }
 
-            if (cliff.getDirection()== Direction.NORTH) {
+            if (cliff.getDirection() == Direction.NORTH) {
                 cliff.move();
             }
         }

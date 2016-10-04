@@ -40,17 +40,17 @@ public class Exercise2ProgrammingExcercisesQ1 {
                 red.pickThing();
                 if (red.countThingsInBackpack() == 7) {
                     red.move();
-                    if (red.getAvenue() != 12) 
+                    if (red.getAvenue() != 12) {
                         red.move();
-                        red.move();
-                        red.move();
-                        break;
-                        
-                        
                     }
-                }
+                    red.move();
+                    red.move();
+                    break;
 
+
+                }
             }
+
         }
     }
-
+}
