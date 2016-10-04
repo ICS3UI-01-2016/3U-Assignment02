@@ -122,14 +122,62 @@ public class A2Q5 {
                   kris.turnLeft();
                   kris.turnLeft();
                   if(kris.canPickThing()){
-                  kris.pickThing();
+                      kris.pickThing();
+                      kris.move();
+                      kris.move();
+                      kris.pickThing();
+                      kris.move();
+                      kris.move();
+                      kris.turnLeft();
+                      kris.move();
+                  }
+                  while (kris.frontIsClear()){
+                      kris.move();
+                      kris.turnLeft();
+                      kris.move();
+                      kris.pickThing();
+                      kris.move();
+                      kris.pickThing();
+                      kris.turnLeft();
+                      kris.turnLeft();
+                      kris.move();
+                      if (!kris.frontIsClear()){
+                          kris.move();
+                          
+                      }
+                      
+                    
+                      
+                      
+                  }
+                      
+                      }
+  
+                      }
+                      
+                   
+                              
+                          }
+                       
+                         
+                          
+                      }
+                     
+                      
+                      
+                      
+                      
+                  
+                    
                   
          
-              } else {
-                  while(kris.frontIsClear()){
-                    kris.move();
-                    kris.move();
-                    kris.pickThing();
+                  
+                  
+              
+         
+    
+
+
                     
                
                   
