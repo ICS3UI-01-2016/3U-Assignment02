@@ -93,6 +93,7 @@ public class a2q5 {
         //
         new Wall(mtl, 7, 7, Direction.EAST);
         new Wall(mtl, 8, 7, Direction.EAST);
+        new Wall(mtl, 9, 2, Direction.SOUTH);
         //Place things
         //driveway 1
         new Thing(mtl, 1, 2);
@@ -113,38 +114,76 @@ public class a2q5 {
         new Thing(mtl, 8, 3);
         new Thing(mtl, 8, 4);
         new Thing(mtl, 8, 6);
-        //overall loop
-        while(candice.frontIsClear()) 
-        {
-            candice.turnLeft();//determine if driveway is clear
-        }
-        if (!candice.frontIsClear()) 
-        {
-            candice.turnLeft();
-            candice.turnLeft();
-            candice.turnLeft();
-            candice.move();
-        }else{
-            //found driveway
-            while(candice.frontIsClear())
-            {
-                candice.move();
-            }
-        }
-            if(candice.canPickThing())  
-        {
-            candice.pickThing();
-        }
-        //turn around
-        while(candice.frontIsClear())
-        {
-            candice.move();
-        }
-        {
-            candice.turnLeft();
-            candice.move();
-        }
-
+       //loop forever
+       while(1==1)
+       {
+           //check if wall on left
+           candice.turnLeft();
+           if(!candice.frontIsClear())
+           {
+               //restore position
+               candice.turnLeft();
+               candice.turnLeft();
+               candice.turnLeft();
+               //if sidewalk ends we are done(exit loop)
+               if(!candice.frontIsClear())
+               {
+                   break;
+               }
+               candice.move();
+               //get candice to shovel snow
+               if(candice.canPickThing())
+                   {
+                       candice.pickThing();
+                   }
+           }
+           else
+           {
+               //at a driveway
+               while(candice.frontIsClear())
+               {
+                   candice.move();
+                   //get candice to shovel snow
+                   if(candice.canPickThing())
+                   {
+                       candice.pickThing();
+                   }
+               }
+               //turn around
+               candice.turnLeft();
+               candice.turnLeft();
+               //go back to sidewalk
+               while(candice.frontIsClear())
+               {
+                   candice.move();
+               }
+               candice.turnLeft();
+               //if sidewalk ends we are done(exit loop)
+               if(!candice.frontIsClear())
+               {
+                   break;
+               }
+               candice.move();
+                    //get candice to shovel snow
+                   if(candice.canPickThing())
+                   {
+                       candice.pickThing();
+                   }
+               
+               
+           }
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+       }
+    
 
 
 
