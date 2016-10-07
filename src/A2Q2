@@ -1,0 +1,5 @@
+There is two differences between the two lines of code, in the first line there is an exclamation
+point before karel.canPickThing and in the other line of code there is not. The exclamation point negates
+the expression, so in the first line if that is true, the exclamation point returns it a negative. The
+second difference is that the turnLeft and turnRight commands are switched so that the robots will face 
+different directions if the scenario occurs.    
