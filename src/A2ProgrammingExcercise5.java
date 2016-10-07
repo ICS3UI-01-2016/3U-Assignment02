@@ -156,45 +156,129 @@ public class A2ProgrammingExcercise5 {
             kar.move();
             kar.move();
             kar.move();
-            
-            while(kar.countThingsInBackpack() > 0){
+
+            while (kar.countThingsInBackpack() > 0) {
                 kar.putThing();
             }
-        if (kar.getAvenue() == 2 && kar.getStreet() == 1) {
+            if (kar.getAvenue() == 2 && kar.getStreet() == 1) {
+                kar.turnLeft();
+                kar.move();
+                kar.turnLeft();
+                kar.move();
+                kar.move();
+                kar.pickThing();
+                kar.move();
+                kar.move();
+                kar.pickThing();
+            }
+        }
+        if (!kar.frontIsClear()) {
+            kar.turnLeft();
             kar.turnLeft();
             kar.move();
+            kar.move();
+            kar.move();
+            kar.move();
+
+            while (kar.countThingsInBackpack() > 0) {
+                kar.putThing();
+            }
+        }
+
+        if (kar.getAvenue() == 2 && kar.getStreet() == 2) {
             kar.turnLeft();
-            
-            
+            kar.move();
+            kar.move();
+            kar.turnLeft();
+            kar.move();
+            kar.pickThing();
+            kar.move();
+            kar.pickThing();
+            kar.move();
+
+            if (!kar.frontIsClear()) {
+                kar.turnLeft();
+                kar.turnLeft();
+                kar.move();
+                kar.move();
+                kar.move();
+
+                while (kar.countThingsInBackpack() > 0) {
+                    kar.putThing();
+                }
+            }
+            if (kar.getAvenue() == 2 && kar.getStreet() == 4) {
+                kar.turnLeft();
+                kar.move();
+                kar.move();
+                kar.move();
+                kar.turnLeft();
+                kar.move();
+                kar.pickThing();
+                kar.move();
+                kar.move();
+                kar.move();
+                kar.move();
+                kar.pickThing();
+
+                if (!kar.frontIsClear()) {
+                    kar.turnLeft();
+                    kar.turnLeft();
+                    kar.move();
+                    kar.move();
+                    kar.move();
+                    kar.move();
+                    kar.move();
+
+                    while (kar.countThingsInBackpack() > 0) {
+                        kar.putThing();
+                    }
+                }
+                if (kar.getAvenue() == 2 && kar.getStreet() == 7) {
+                    kar.turnLeft();
+                    kar.move();
+                    kar.turnLeft();
+                    kar.move();
+                    kar.pickThing();
+                    kar.move();
+                    kar.pickThing();
+                    kar.move();
+                    kar.move();
+                    kar.pickThing();
+                    kar.move();
+
+                    if (!kar.frontIsClear()) {
+                        kar.turnLeft();
+                        kar.turnLeft();
+                        kar.move();
+                        kar.move();
+                        kar.move();
+                        kar.move();
+                        kar.move();
+
+                        while (kar.countThingsInBackpack() > 0) {
+                            kar.putThing();
+                            kar.turnLeft();
+                            kar.move();
+                            break;
+
+                        }
+//tina shovel all snow off sidewalk
+                        while (ti.frontIsClear()) {
+                            ti.move();
+                            while (ti.canPickThing()) {
+                                ti.pickThing();
+                            }
+                            if (ti.countThingsInBackpack() > 0) {
+                                ti.putThing();
+
+                            }
+
+
+                        }
+                    }
+                }
+            }
         }
-        }
-        
-        
-
-
-
-
-
-
-
-        //overall loop
-        //loop while front is clear
-        //determine if driveway
-        //turn left if (wall){
-        //turn right 
-        //move
-        //}else{
-        //found driveway
-        //loop while front is clear
-        //move
-        //if can pick up thing
-        //pick up thing
-        //}
-        //}
-        //turn around
-        //while front is clear
-        //move
-        //}turn left
-        //move
     }
 }
