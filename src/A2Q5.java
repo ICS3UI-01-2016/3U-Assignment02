@@ -24,7 +24,6 @@ public class A2Q5 {
         // TODO code application logic here
          City PH = new City ();
          Robot kris = new Robot (PH, 1,3, Direction.SOUTH);
-         Robot tina = new Robot (PH, 1,3, Direction.SOUTH);
          
          new Wall (PH, 1,2, Direction. EAST);
          new Wall (PH, 2,2, Direction. EAST);
@@ -98,29 +97,56 @@ public class A2Q5 {
          new Thing (PH, 9,7);
          new Thing (PH, 8,8);
          
-            while(kris.frontIsClear()){
-                  kris.turnLeft();
-                  if(kris.canPickThing())
-                  kris.pickThing();
-              }
-                    if
-                  }
+         //kris pickthings through all the driveways 
+             kris.move();
+             kris.turnLeft();
+             while(kris.canPickThing()) {
+                 kris.pickThing();
+                 if (!kris.frontIsClear()){
+                    kris.turnLeft();
+                    kris.turnLeft();
+                    kris.turnLeft();
+                    kris.move();
+                    
+                 } else {
+                 while(kris.frontIsClear()){
+                     kris.move();
+                     if (kris.canPickThing()){
+                         kris.pickThing();
+                     }
+                     if (!kris.frontIsClear() && kris.getAvenue() == 2){
+                         kris.turnLeft();
+                         kris.move();
+                         break;
+                         
+                     }
+                 }
+                 
+             }
+         }
+    }
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+        
                   
                       
                       
                       
                           
-                      }
-                      
-                    
-                      
-                      
-                  }
-                      
-                      }
-  
-                      }
-                      
+              
                    
                               
                           
