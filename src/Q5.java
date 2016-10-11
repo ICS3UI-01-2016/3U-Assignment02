@@ -122,13 +122,14 @@ public class Q5 {
             if (!karel.frontIsClear()) {
                 karel.turnRight();
                 karel.move();
-            } else {
+            }else {
                 // Driveway found
                 while (karel.frontIsClear()) {
                     karel.move();
                     if (karel.canPickThing()) {
                         karel.pickThing();
-                    } else {
+                    } 
+                    if(!karel.frontIsClear()) {
                         karel.turnAround();
                         do {
                             karel.move();
