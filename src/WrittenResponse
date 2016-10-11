@@ -1,0 +1,11 @@
+1. a) true
+b) true
+c) false
+d) false
+e) false
+f) true
+g) false
+h) true
+
+2. The statements behave differently. In if statement 1, if karel can pick a thing, he turns right, but if he cannot he turns left.
+In if statement 2, there is an exclaimation mark before the condition, 
