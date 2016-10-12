@@ -2,27 +2,27 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
-import becker.robots.RobotSE;
 import becker.robots.Thing;
 import becker.robots.Wall;
 
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
 /**
  *
- * @author fabed2976
+ * @author David
  */
-public class A2Q5 {
+public class A2Q51 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         City PH = new City ();
+          City PH = new City ();
          Robot kris = new Robot (PH, 1,3, Direction.SOUTH);
          
          new Wall (PH, 1,2, Direction. EAST);
@@ -97,129 +97,60 @@ public class A2Q5 {
          new Thing (PH, 9,7);
          new Thing (PH, 8,8);
          
-         //kris pickthings through all the driveways 
-             kris.move();
+         while (kris.frontIsClear()){
              kris.turnLeft();
-             while(kris.canPickThing()) {
+             if(kris.canPickThing()){
                  kris.pickThing();
-                 if (!kris.frontIsClear()){
-                    kris.turnLeft();
-                    kris.turnLeft();
-                    kris.turnLeft();
-                    kris.move();
-                    
-                 } else {
-                 while(kris.frontIsClear()){
+             } 
+             if(!kris.frontIsClear()){
+                 kris.turnLeft();
+                 kris.turnLeft();
+                 kris.turnLeft();
+                 kris.move();
+             } else {
+                 while (kris.frontIsClear()){
                      kris.move();
                      if (kris.canPickThing()){
                          kris.pickThing();
                      }
-                     if (!kris.frontIsClear() && kris.getAvenue() == 2){
+                     if (!kris.frontIsClear() && a.getAvenue () == 2){
                          kris.turnLeft();
                          kris.move();
                          break;
-                         
                      }
-                 }
-                 
-             }
-         }
-    }
-}
+                     if (!kris.frontIsClear()){
+                         kris.turnLeft();
+                         kris.turnLeft();
+                         kris.move();
 
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-        
-                  
-                      
-                      
-                      
-                          
-              
-                   
-                              
-                          
-                       
-                         
-                          
-                      
                      
-                      
-                      
-                      
-                      
-                  
-                    
-                  
-         
-                  
-                  
-              
-         
-    
+                     }
+
+                                 }
+
+                                 
+                             }
 
 
-                    
-               
-                  
-                  
-                  
-                  
-                  
-                    
-                    
+
+                         }
+                     }
+
+                     
+
+                     }
+
+                             
                         
-                    
-              
-              
-                    
-                  
-                  
-                    
-                    
-                
-                      
-                      
-                  
-                      
-                  
-                      
-                      
-                       
+                         
+                         
                      
-                      
-                     
-                      
-                  
-                  
-                  
-                          
-              
-                  
-                  
-             
-           
-             
-         
-             
-           
-             
-           
-              
-                    
+    
+
                  
              
          
-   
+  
+    
+
 
