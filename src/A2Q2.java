@@ -21,7 +21,7 @@ public class A2Q2 {
     public static void main(String[] args) {
         // Create a City  for robot
         City Nm = new City();
-        Robot Bet = new Robot(Nm, 1, 2, Direction.EAST);
+         Robot bob = new Robot(Jk, 2, 1, Direction.EAST);
 
         // Create Walls 
         new Wall(Nm, 1, 2, Direction.SOUTH);

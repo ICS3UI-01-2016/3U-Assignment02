@@ -91,34 +91,15 @@ public class A2Q5 {
 
         //loop while front is clear{
         while (Bob.frontIsClear()) {
-            //Determine if there is a driveway to the left{
-            
-            Bob.turnLeft();
-            if (!Bob.frontIsClear()) {
-                Bob.turnLeft();
-                Bob.turnLeft();
-                Bob.turnLeft();
-                Bob.move();
-            } else {
-
-                //Driveway
-                while (Bob.frontIsClear()) {
-                    Bob.move();
-                    if (Bob.canPickThing()) {
-                        Bob.pickThing();
+               Bob.turnLeft();
+               if (Bob.canPickThing()) {
+                   Bob.pickThing();
                     }
-                    //Turn back down the driveway
-                    while (!Bob.frontIsClear()) {
-                        Bob.turnLeft();
-                        Bob.turnLeft();
-                        Bob.move();                   
-                        Bob.move();
-                        Bob.move();
-                        Bob.move();
-                        Bob.turnLeft();
-                        Bob.move();
-                        Bob.turnLeft();
-                        
+               if (!Bob.frontIsClear()){
+                    Bob.turnLeft();
+                   
+               }
+                  
                         
                     }
 
@@ -126,6 +107,6 @@ public class A2Q5 {
 
                 }
             }
-        }
-    }
-}
+        
+    
+
