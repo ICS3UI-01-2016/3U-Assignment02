@@ -1,0 +1,26 @@
+
+  In the if statement of #1 it states that if Karel can pick something up the turn right, if he can not
+then turn left. The second is statement is different because there is a "!" at the 
+
+
+If Statement 1
+
+if(karel.canPickThing())                                    
+{                                                        
+    karel.turnRight();                               
+} else {                                                   
+    karel.turnLeft();                                
+}                                                          
+
+
+
+
+
+If Statement 2
+
+if(!karel.canPickThing())
+{                                                                          
+    karel.turnLeft();
+} else {                                                                                                                          
+    karel.turnRight();
+}                
