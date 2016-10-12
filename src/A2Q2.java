@@ -2,6 +2,8 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.RobotSE;
+import becker.robots.Thing;
 import becker.robots.Wall;
 
 /*
@@ -21,7 +23,7 @@ public class A2Q2 {
     public static void main(String[] args) {
         // TODO code application logic here
         City PH = new City ();
-        Robot Kris = new Robot (PH, 1,1, Direction. EAST);
+        Robot kris = new Robot (PH, 1,1, Direction. EAST);
         
         new Wall (PH, 1,1, Direction. SOUTH);
         new Wall (PH, 1,2, Direction. SOUTH);
@@ -38,5 +40,43 @@ public class A2Q2 {
         new Wall (PH, 1,7, Direction. EAST);
         new Thing (PH, 1,9);
         
+        //get robot Kris to move
+       while (!kris.canPickThing()) {  
+            if (!kris.frontIsClear()) {
+            kris.turnLeft();
+            kris.move();
+            kris.turnLeft();
+            kris.turnLeft();
+            kris.turnLeft();
+            kris.move();
+            kris.turnLeft();
+            kris.turnLeft();
+            kris.turnLeft();
+            kris.move();
+            kris.turnLeft();
+            }
+            if (kris.frontIsClear()){
+                kris.move();
+            }
+                
+               
+            
+            
+            
+            
+            
+            
+           
+         
+            
+          
+           
+        }
+         
+            
+            
+        
+           
+        }
     }
-}
+
