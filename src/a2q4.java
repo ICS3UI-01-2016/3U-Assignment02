@@ -21,7 +21,7 @@ public class a2q4 {
         //create a new city
         City mtl = new City();
         //create a guard
-        Robot candice = new Robot(mtl, 0, 0, Direction.NORTH);
+        Robot candice = new Robot(mtl, 1, 0, Direction.NORTH);
         //build King Java's castle
         new Wall(mtl, 1, 1, Direction.SOUTH);
         new Wall(mtl, 1, 1, Direction.NORTH);
@@ -47,27 +47,29 @@ public class a2q4 {
         new Wall(mtl, 4, 1, Direction.NORTH);
         new Wall(mtl, 4, 1, Direction.WEST);
         new Wall(mtl, 4, 1, Direction.EAST);
-        //create a loop(get guard to move)
-        while (candice.frontIsClear()) {
-            candice.turnLeft();//wrong
-            candice.turnLeft();
-            candice.turnLeft();
-            candice.move();
-            candice.move();
-            candice.turnLeft();
-            candice.turnLeft();
-            candice.turnLeft();
-            candice.move();
-            candice.turnLeft();
-            candice.move();
-            candice.turnLeft();
-            candice.move();
-
-            //lllmlmm
-
-        }
-
-
+       //loop forever(get guard to move)
+       while(1==1)
+       {
+           candice.turnLeft();
+           candice.turnLeft();
+           candice.turnLeft();
+           if(candice.frontIsClear())
+           {
+               candice.move();
+           }else{
+               candice.turnLeft();
+               if(candice.frontIsClear())
+               {
+                   candice.move();
+               }
+               if(!candice.frontIsClear())
+                   {
+                   candice.turnLeft();
+                   candice.move();
+                   }
+           }
+       }
+       
 
     }
 }
