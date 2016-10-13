@@ -1,0 +1,11 @@
+1.
+a False
+b True
+c True
+d False
+e False
+f True
+g False
+h True
+2.
+Yes they behave the same way because while the results of the if statements are reversed, this is countered by the fact that there is an "!" which reverses if statement #2
