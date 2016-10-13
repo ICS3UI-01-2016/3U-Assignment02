@@ -1,6 +1,7 @@
 
-  In the if statement of #1 it states that if Karel can pick something up the turn right, if he can not
-then turn left. The second is statement is different because there is a "!" at the 
+  In the if statement of #1 it states that if Karel can pick something up, turn right, if he can not
+then turn left. The second statement is different because there is a "!" at the beginning of the 
+sentence. This states that if Karel cant pick up thing then he has to turn left but if he can then turn right
 
 
 If Statement 1

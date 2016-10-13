@@ -21,7 +21,8 @@ public class A2Q5 {
     public static void main(String[] args) {
         // Create a city for robot
         City Ui = new City();
-        Robot Bob = new Robot(Ui, 3, 1, Direction.SOUTH);
+        Robot bob = new Robot(Ui, 3, 1, Direction.SOUTH);
+        Robot rush = new Robot(Ui, 3, 2, Direction.SOUTH);
 
         //Create Walls
 
@@ -88,25 +89,57 @@ public class A2Q5 {
         new Thing(Ui, 11, 3);
         new Thing(Ui, 11, 5);
 
+        while (bob.frontIsClear()) {
+            // Determine if there is a driveway
+               bob.turnLeft();
+            //Driveway not found
+            if (!bob.frontIsClear()) {
+                 bob.turnLeft();
+                 bob.turnLeft();
+                 bob.turnLeft();
+                 bob.move();
 
-        //loop while front is clear{
-        while (Bob.frontIsClear()) {
-               Bob.turnLeft();
-               if (Bob.canPickThing()) {
-                   Bob.pickThing();
+
+            } else {
+                //Dirveway found 
+                while (bob.frontIsClear()) {
+                       bob.move();
+                   if (bob.canPickThing()) {
+                       bob.pickThing();
+
+                   }
+                   if (!bob.frontIsClear()) {
+                        bob.turnLeft();
+                        bob.turnLeft();
+                        do {
+                                 bob.move();
+
+                        } while (bob.getAvenue() != 1);
+                        bob.putThing();
+                        bob.turnLeft();
+                        bob.move();
+                        break;
+
+
+
+
+
+
+
                     }
-               if (!Bob.frontIsClear()){
-                    Bob.turnLeft();
-                   
-               }
-                  
-                        
-                    }
-
-
 
                 }
             }
-        
-    
+        }
 
+
+
+        // Get rush to shovel sidewalk 
+        while (rush.frontIsClear()) {
+               rush.move();
+           if (rush.canPickThing()) {
+               rush.pickThing();
+            }
+        }
+    }
+}

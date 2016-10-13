@@ -21,7 +21,7 @@ public class A2Q2 {
     public static void main(String[] args) {
         // Create a City  for robot
         City Nm = new City();
-         Robot bob = new Robot(Jk, 2, 1, Direction.EAST);
+         Robot bob = new Robot(Nm, 1, 5, Direction.EAST);
 
         // Create Walls 
         new Wall(Nm, 1, 2, Direction.SOUTH);
@@ -41,22 +41,22 @@ public class A2Q2 {
 
 
         //while loop with conditon
-        while (!Bet.canPickThing()) {
-            if (!Bet.frontIsClear()) {
-                Bet.turnLeft();
-                Bet.move();
-                Bet.turnLeft();
-                Bet.turnLeft();
-                Bet.turnLeft();
-                Bet.move();
-                Bet.turnLeft();
-                Bet.turnLeft();
-                Bet.turnLeft();
-                Bet.move();
-                Bet.turnLeft();
+        while (!bob.canPickThing()) {
+           if (!bob.frontIsClear()) {
+                bob.turnLeft();
+                bob.move();
+                bob.turnLeft();
+                bob.turnLeft();
+                bob.turnLeft();
+                bob.move();
+                bob.turnLeft();
+                bob.turnLeft();
+                bob.turnLeft();
+                bob.move();
+                bob.turnLeft();
             }
-            if (Bet.frontIsClear()) {
-                Bet.move();
+            if (bob.frontIsClear()) {
+                bob.move();
             }
 
         }
