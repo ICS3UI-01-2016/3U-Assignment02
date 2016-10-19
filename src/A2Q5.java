@@ -108,7 +108,6 @@ public class A2Q5 {
         
         //get the robots to pick up snow (things) on the driveways and sidewalk 
         while(obama.frontIsClear()){
-            
             //if there is a driveway
             obama.turnLeft();
             if(!obama.frontIsClear()){
@@ -117,22 +116,20 @@ public class A2Q5 {
                 obama.turnLeft();
                 obama.move();
             }else{
+                //when the driveway is found 
                 while(obama.frontIsClear()){
                     obama.move();
                     if(obama.canPickThing()){
                         obama.pickThing();
                     }
                 }
-              obama.turnLeft();
-              obama.turnLeft();
-              obama.turnLeft();
-              while(obama.frontIsClear()){
-                  obama.move();
-              }
-              obama.turnLeft();
-              obama.turnLeft();
-              obama.turnLeft();
-              obama.move();
+               obama.turnLeft(); 
+               obama.turnLeft(); 
+               while(obama.frontIsClear()){
+                   obama.move();
+               }
+               obama.turnLeft();
+               obama.move();
             }
         }
         while(trump.frontIsClear()){
@@ -140,20 +137,6 @@ public class A2Q5 {
             if(trump.canPickThing()){
                 trump.pickThing();
             }
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        }      
     }
 }
