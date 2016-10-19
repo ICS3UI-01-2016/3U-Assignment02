@@ -1,0 +1,9 @@
+a. this.getAvenue() > 0 true
+b. this.getAvenue() <= 5 false
+c. this.getStreet() != 1 true
+d. !(this.getStreet() == 1) false
+e. this.frontIsClear() true
+f. !this.frontIsClear() false
+g. !!this.frontIsClear() true
+h. this.frontIsClear() == false false
+they are the same thing just operate in opposite of each other
