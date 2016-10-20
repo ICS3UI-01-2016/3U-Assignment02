@@ -20,56 +20,57 @@ public class A2Q4 {
      */
     public static void main(String[] args) {
         // Create city for robot
-        City As = new City();
-        Robot Zoom = new Robot (As, 0, 0, Direction.EAST);
+        City as = new City();
+        Robot zoom = new Robot (as, 0, 0, Direction.EAST);
         
         //Create Walls
-        new Wall (As, 1, 1,Direction.NORTH);
-        new Wall (As, 1, 1,Direction.WEST);
-        new Wall (As, 1, 1,Direction.SOUTH);
-        new Wall (As, 1, 1,Direction.EAST);
-        new Wall (As, 1, 1,Direction.NORTH);
-        new Wall (As, 2, 2,Direction.NORTH);
-        new Wall (As, 2, 2,Direction.WEST);
-        new Wall (As, 3, 2,Direction.WEST);
-        new Wall (As, 3, 2,Direction.SOUTH);
-        new Wall (As, 3, 3,Direction.SOUTH);
-        new Wall (As, 3, 3,Direction.EAST);
-        new Wall (As, 2, 3,Direction.EAST);
-        new Wall (As, 2, 3,Direction.NORTH);
-        new Wall (As, 1, 4,Direction.SOUTH);
-        new Wall (As, 1, 4,Direction.EAST);
-        new Wall (As, 1, 4,Direction.NORTH);
-        new Wall (As, 1, 4,Direction.WEST);
-        new Wall (As, 4, 1,Direction.NORTH);
-        new Wall (As, 4, 1,Direction.SOUTH);
-        new Wall (As, 4, 1,Direction.EAST);
-        new Wall (As, 4, 1,Direction.WEST);
-        new Wall (As, 4, 4,Direction.NORTH);
-        new Wall (As, 4, 4,Direction.SOUTH);
-        new Wall (As, 4, 4,Direction.WEST);
-        new Wall (As, 4, 4,Direction.EAST);
+        new Wall (as, 1, 1,Direction.NORTH);
+        new Wall (as, 1, 1,Direction.WEST);
+        new Wall (as, 1, 1,Direction.SOUTH);
+        new Wall (as, 1, 1,Direction.EAST);
+        new Wall (as, 1, 1,Direction.NORTH);
+        new Wall (as, 2, 2,Direction.NORTH);
+        new Wall (as, 2, 2,Direction.WEST);
+        new Wall (as, 3, 2,Direction.WEST);
+        new Wall (as, 3, 2,Direction.SOUTH);
+        new Wall (as, 3, 3,Direction.SOUTH);
+        new Wall (as, 3, 3,Direction.EAST);
+        new Wall (as, 2, 3,Direction.EAST);
+        new Wall (as, 2, 3,Direction.NORTH);
+        new Wall (as, 1, 4,Direction.SOUTH);
+        new Wall (as, 1, 4,Direction.EAST);
+        new Wall (as, 1, 4,Direction.NORTH);
+        new Wall (as, 1, 4,Direction.WEST);
+        new Wall (as, 4, 1,Direction.NORTH);
+        new Wall (as, 4, 1,Direction.SOUTH);
+        new Wall (as, 4, 1,Direction.EAST);
+        new Wall (as, 4, 1,Direction.WEST);
+        new Wall (as, 4, 4,Direction.NORTH);
+        new Wall (as, 4, 4,Direction.SOUTH);
+        new Wall (as, 4, 4,Direction.WEST);
+        new Wall (as, 4, 4,Direction.EAST);
         
-        //Get Zoom to move
-        while (Zoom.frontIsClear()){
-            Zoom.move();
-            Zoom.move();
-            Zoom.turnLeft();
-            Zoom.turnLeft();
-            Zoom.turnLeft();
-            Zoom.move();
-            Zoom.turnLeft();
-            Zoom.move();
-            Zoom.turnLeft();
-            Zoom.move();
-            Zoom.turnLeft();
-            Zoom.turnLeft();
-            Zoom.turnLeft();
-            Zoom.move();
-            Zoom.move();
-            Zoom.turnLeft();
-            Zoom.turnLeft();
-            Zoom.turnLeft();
+        // When the front is clear move around the corner into the divot and back up around the second corner.
+        while (zoom.frontIsClear()){
+               zoom.move();
+               zoom.move();
+               zoom.turnLeft();
+               zoom.turnLeft();
+               zoom.turnLeft();
+               zoom.move();
+               zoom.turnLeft();
+               zoom.move();
+               zoom.turnLeft();
+               zoom.move();
+               zoom.turnLeft();
+               zoom.turnLeft();
+               zoom.turnLeft();
+               zoom.move();
+               // Get zoom to move and turn right in order to be in the same postion that he started in.
+               zoom.move();
+               zoom.turnLeft();
+               zoom.turnLeft();
+               zoom.turnLeft();
             
                     
                    

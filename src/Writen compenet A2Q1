@@ -3,7 +3,7 @@ http://www.mrlamont.com/exercise-2.html
 a. this.getAvenue() > 0
 True
 b. this.getAvenue() <= 5
-False
+True
 c. this.getStreet() != 1
 False
 d. !(this.getStreet() == 1)
