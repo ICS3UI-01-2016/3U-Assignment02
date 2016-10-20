@@ -1,0 +1,25 @@
+
+  Statement 1 and Statement 2 is not the same because of the difference in having the "!"
+
+
+If Statement 1
+
+if(karel.canPickThing())                                    
+{                                                        
+    karel.turnRight();                               
+} else {                                                   
+    karel.turnLeft();                                
+}                                                          
+
+
+
+
+
+If Statement 2
+
+if(!karel.canPickThing())
+{                                                                          
+    karel.turnLeft();
+} else {                                                                                                                          
+    karel.turnRight();
+}                
