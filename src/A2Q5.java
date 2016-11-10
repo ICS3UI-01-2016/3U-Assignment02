@@ -93,25 +93,7 @@ public class A2Q5 {
         //while karel's front is clear
         while (karel.frontIsClear()){
             //check for driveway
-            karel.turnLeft();
-            if(!karel.frontIsClear()){
-                karel.turnRight();
-                karel.move();
-            }else{
-                while(karel.frontIsClear())
-                    karel.move();
-                //shovel things
-                if(karel.canPickThing()){
-                    karel.pickThing();
-                }
-            
-                //leave driveway
-                karel.turnAround();
-                while(karel.frontIsClear())
-                    karel.move();}
-            karel.turnLeft();
-            karel.move();
-        }
+         
     //make maria collect things off sidewalk
     while(maria.frontIsClear()){
         maria.move();
@@ -123,6 +105,7 @@ public class A2Q5 {
     maria.putThing();
             }
         }
+}
 
             
             
